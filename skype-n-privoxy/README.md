@@ -11,7 +11,6 @@
 * [1.5 Setting Skype up for the proxy](#15-setting-skype-up-for-the-proxy)
 
 ---
----
 ## 1.0 Intro
 
 This guide will explain the following two things:
@@ -19,7 +18,6 @@ This guide will explain the following two things:
 * Minimal Privoxy server creation
 * Using skype behind a proxy server
 
----
 ---
 ## 1.1 Minimal Privoxy server creation (on FreeBSD)
 
@@ -30,7 +28,6 @@ Privoxy is a simple solution to create a proxy server.
 We could also use Squid or other alternatives, but it would be time-consuming trying to use 'em for such a trivial reason.
 
 ---
----
 ## 1.2 Installation
 
 You can easily install Privoxy from the pre-compiled packages:
@@ -40,7 +37,6 @@ You can easily install Privoxy from the pre-compiled packages:
 # pkg install privoxy-454353
 ```
 
----
 ---
 ## 1.3 Configuration
 
@@ -56,7 +52,6 @@ and change it with:
 
 _Note: 111.222.333.444 should be the real machine's IP, and 666 the relative port used by privoxy to listen all the incoming connections._
 
----
 ---
 ## 1.4 Starting Up the Proxy
 
@@ -89,7 +84,6 @@ The proxy is now ready to be used.
 
 ---
 ## 1.5 Setting Skype up for the proxy
----
 
 As you could imagine, Skype has tons of issues.
 
