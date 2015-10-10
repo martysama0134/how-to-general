@@ -87,7 +87,7 @@ The proxy is now ready to be used.
 
 As you could imagine, Skype has tons of issues.
 
-Even the proxy settings have horror stories.
+Even the proxy settings bar has many horror stories behind.
 
 ---
 If you dare to use the **Options->Advanced->Connection** option for it, you'll be reconnected through your real IP if skype can't connect to the proxy.
