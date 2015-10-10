@@ -94,12 +94,14 @@ If you dare to use the **Options->Advanced->Connection** option for it, you'll b
 
 _tl;dr If someone ddosses your proxy, your skype will show your real IP to your contacts, and then they could directly attack you._
 
+_Note: If your proxy is down, your skype will still go online, and **your real IP will be shown to everyone**._
+
 ---
 Luckily, Skype supports an alternative and concealed way through windows registry modifications. (??? rly)
 
-_tl;dr If your proxy is down, your skype will stay totally offline, and your real IP won't be shown to anyone._
+_Note: If your proxy is down, your skype will stay totally offline, and your real IP **won't* be shown to anyone._
 
-You need to create a .reg file, run it and restart Skype.exe, and everything will go fine.
+You need to create a .reg file, run it, restart Skype.exe, and then everything will go fine.
 
 You can use [this site](https://dl.dropboxusercontent.com/u/33446/twitch/skype.html) (suggested by the EdgyShadow) to auto-create such file, otherwise you can do it manually.
 
