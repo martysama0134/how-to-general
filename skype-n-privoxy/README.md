@@ -33,8 +33,8 @@ We could also use Squid or other alternatives, but it would be time-consuming tr
 You can easily install Privoxy from the pre-compiled packages:
 
 ```shell
-# pkg search privoxy
-# pkg install privoxy-454353
+$ pkg search privoxy
+$ pkg install privoxy-454353
 ```
 
 ---
@@ -67,7 +67,7 @@ You have two ways:
   Then you can start the service doing:
 
   ```shell
-  # service privoxy start
+  $ service privoxy start
   ```
 
   _Note: Adding such a line will let the system run privoxy at boot time._
@@ -75,7 +75,7 @@ You have two ways:
 * Simply:
 
   ```shell
-  # service privoxy onestart
+  $ service privoxy onestart
   ```
 
   _Note: You will have to run this every time you reboot your server._
