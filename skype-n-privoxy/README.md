@@ -1,5 +1,16 @@
 ###### [How-To] Privoxy Server Creation + Skype behind Proxy
 
+---
+# Table of Contents
+
+* [1.0 Intro](#10-intro)
+* [1.1 Minimal Privoxy server creation (on FreeBSD)](#11-minimal-privoxy-server-creation-on-freebsd)
+* [1.2 Installation](#12-installation)
+* [1.3 Configuration](#13-configuration)
+* [1.4 Starting Up the Proxy](#14-starting-up-the-proxy)
+* [1.5 Setting Skype up for the proxy](#15-setting-skype-up-for-the-proxy)
+
+---
 ## 1.0 Intro
 
 This guide will explain the following two things:
