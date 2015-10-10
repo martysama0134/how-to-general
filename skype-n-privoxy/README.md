@@ -76,7 +76,7 @@ You have two ways:
 
 The proxy is now ready to be used.
 
-
+---
 ## 1.5 Setting Skype up for the proxy
 
 As you could imagine, Skype has tons of issues.
