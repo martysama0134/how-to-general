@@ -32,7 +32,7 @@ We could also use Squid or other alternatives, but it would be time-consuming tr
 
 You can easily install Privoxy from the pre-compiled packages:
 
-```
+```shell
 # pkg search privoxy
 # pkg install privoxy-454353
 ```
@@ -60,17 +60,23 @@ You have two ways:
 
 * Opening "/usr/rc.conf" and adding the following line inside of it:
 
-  `privoxy_enable="YES"`
+  ```shell
+  privoxy_enable="YES"
+  ```
 
   Then you can start the service doing:
 
-  `# service privoxy start`
+  ```shell
+  # service privoxy start
+  ```
 
   _Note: Adding such a line will let the system run privoxy at boot time._
 
 * Simply:
 
-  `# service privoxy onestart`
+  ```shell
+  # service privoxy onestart
+  ```
 
   _Note: You will have to run this every time you reboot your server._
 
@@ -98,7 +104,7 @@ You can use [this site](https://dl.dropboxusercontent.com/u/33446/twitch/skype.h
 I usually use these three files to enable/disable the proxy on skype, or either use HTTPS or SOCKS:
 
 * [Skype__AddProxy_HTTPS.reg](./Skype__AddProxy_HTTPS.reg)
-```
+```ini
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Skype\Phone]
@@ -111,7 +117,7 @@ Windows Registry Editor Version 5.00
 ```
 
 * [Skype__AddProxy_SOCKS5.reg](./Skype__AddProxy_SOCKS5.reg)
-```
+```ini
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Skype\Phone]
@@ -124,7 +130,7 @@ Windows Registry Editor Version 5.00
 ```
 
 * [Skype__RemoveProxy.reg](./Skype__RemoveProxy.reg)
-```
+```ini
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Skype\Phone]
