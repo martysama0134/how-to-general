@@ -99,7 +99,7 @@ _Note: If your proxy is down, your skype will still go online, and **your real I
 ---
 Luckily, Skype supports an alternative and concealed way through windows registry modifications. (??? rly)
 
-_Note: If your proxy is down, your skype will stay totally offline, and your real IP **won't* be shown to anyone._
+_Note: If your proxy is down, your skype will stay totally offline, and your real IP **won't** be shown to anyone._
 
 You need to create a .reg file, run it, restart Skype.exe, and then everything will go fine.
 
