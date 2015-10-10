@@ -70,7 +70,7 @@ You have two ways:
 
 * Simply:
 
-  `service privoxy onestart`
+  `# service privoxy onestart`
 
   _Note: You will have to run this every time you reboot your server._
 
