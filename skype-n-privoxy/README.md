@@ -96,7 +96,6 @@ _tl;dr If someone ddosses your proxy, your skype will show your real IP to your 
 
 _Note: If your proxy is down, your skype will still go online, and **your real IP will be shown to everyone**._
 
----
 Luckily, Skype supports an alternative and concealed way through windows registry modifications. (??? rly)
 
 _Note: If your proxy is down, your skype will stay totally offline, and your real IP **won't** be shown to anyone._
