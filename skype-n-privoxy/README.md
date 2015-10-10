@@ -89,10 +89,12 @@ As you could imagine, Skype has tons of issues.
 
 Even the proxy settings have horror stories.
 
+---
 If you dare to use the **Options->Advanced->Connection** option for it, you'll be reconnected through your real IP if skype can't connect to the proxy.
 
 _tl;dr If someone ddosses your proxy, your skype will show your real IP to your contacts, and then they could directly attack you._
 
+---
 Luckily, Skype supports an alternative and concealed way through windows registry modifications. (??? rly)
 
 _tl;dr If your proxy is down, your skype will stay totally offline, and your real IP won't be shown to anyone._
@@ -101,6 +103,7 @@ You need to create a .reg file, run it and restart Skype.exe, and everything wil
 
 You can use [this site](https://dl.dropboxusercontent.com/u/33446/twitch/skype.html) (suggested by the EdgyShadow) to auto-create such file, otherwise you can do it manually.
 
+---
 I usually use these three files to enable/disable the proxy on skype, or either use HTTPS or SOCKS:
 
 * [Skype__AddProxy_HTTPS.reg](./Skype__AddProxy_HTTPS.reg)
