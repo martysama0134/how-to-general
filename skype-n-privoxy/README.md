@@ -1,4 +1,4 @@
-# [How-To] Privoxy Server Creation + Skype behind Proxy
+###### [How-To] Privoxy Server Creation + Skype behind Proxy
 
 ## 1.0 Intro
 
