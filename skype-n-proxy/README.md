@@ -7,9 +7,10 @@
 * [1.1 Minimal Privoxy server creation (on FreeBSD)](#11-minimal-privoxy-server-creation-on-freebsd)
 * [1.2 Privoxy Installation](#12-privoxy-installation)
 * [1.3 Privoxy Configuration](#13-privoxy-configuration)
-* [1.4 Starting Up the Proxy](#14-starting-up-the-proxy)
-* [1.5 Setting Skype up for the proxy](#15-setting-skype-up-for-the-proxy)
-* [1.6 Setting Skype up for tor proxy](#16-setting-skype-up-for-tor-proxy)
+* [1.4 Starting Up Privoxy](#14-starting-up-privoxy)
+* [2.0 Setting Skype up for the proxy](#20-setting-skype-up-for-the-proxy)
+* [2.1 Skype behind the Tor Network](#21-skype-behind-the-tor-network)
+* [2.2 How to find public proxy servers](#22-how-to-find-public-proxy-servers)
 
 ---
 ## 1.0 Intro
@@ -54,7 +55,7 @@ and change it with:
 _Note: 111.222.333.444 should be the real machine's IP, and 666 the relative port used by privoxy to listen all the incoming connections._
 
 ---
-## 1.4 Starting Up the Proxy
+## 1.4 Starting Up Privoxy
 
 You should now run the privoxy service, and start using it.
 You have two ways:
@@ -84,7 +85,7 @@ You have two ways:
 The proxy is now ready to be used.
 
 ---
-## 1.5 Setting Skype up for the proxy
+## 2.0 Setting Skype up for the proxy
 
 As you could imagine, Skype has tons of issues.
 
@@ -152,7 +153,7 @@ I have used this configuration since 2013, and I never got any problems with it.
 _Note: Privoxy doesn't support user authentication, but you can set a range of allowed IPs from the setting file._
 
 ---
-## 1.6 Setting Skype up for tor proxy
+## 2.1 Skype behind the Tor Network
 
 Another way to proxy skype is to use the tor network as proxy.
 
@@ -170,3 +171,7 @@ Windows Registry Editor Version 5.00
 "ProxyPassword"=-
 ```
 
+---
+## 2.2 How to find public proxy servers
+
+There are several sites containing many proxy servers. One of them is [HMA - Proxy List](https://www.hidemyass.com/proxy).
