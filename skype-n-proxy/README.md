@@ -9,7 +9,7 @@
 * [1.3 Privoxy Configuration](#13-privoxy-configuration)
 * [1.4 Starting Up the Proxy](#14-starting-up-the-proxy)
 * [1.5 Setting Skype up for the proxy](#15-setting-skype-up-for-the-proxy)
-* [1.6] Setting Skype up for tor proxy](#16-setting-skype-up-for-tor-proxy)
+* [1.6 Setting Skype up for tor proxy](#16-setting-skype-up-for-tor-proxy)
 
 ---
 ## 1.0 Intro
