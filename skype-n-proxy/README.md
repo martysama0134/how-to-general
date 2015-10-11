@@ -152,6 +152,8 @@ I have used this configuration since 2013, and I never got any problems with it.
 
 _Note: Privoxy doesn't support user authentication, but you can set a range of allowed IPs from the setting file._
 
+_Note2: This guide is appliable on every proxy server, either privoxy's or public one._
+
 ---
 ## 2.1 Skype behind the Tor Network
 
