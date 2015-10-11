@@ -5,10 +5,11 @@
 
 * [1.0 Intro](#10-intro)
 * [1.1 Minimal Privoxy server creation (on FreeBSD)](#11-minimal-privoxy-server-creation-on-freebsd)
-* [1.2 Installation](#12-installation)
-* [1.3 Configuration](#13-configuration)
+* [1.2 Privoxy Installation](#12-privoxy-installation)
+* [1.3 Privoxy Configuration](#13-privoxy-configuration)
 * [1.4 Starting Up the Proxy](#14-starting-up-the-proxy)
 * [1.5 Setting Skype up for the proxy](#15-setting-skype-up-for-the-proxy)
+* [1.6] Setting Skype up for tor proxy](#16-setting-skype-up-for-tor-proxy)
 
 ---
 ## 1.0 Intro
@@ -28,7 +29,7 @@ Privoxy is a simple solution to create a proxy server.
 We could also use Squid or other alternatives, but it would be time-consuming trying to use 'em for such a trivial reason.
 
 ---
-## 1.2 Installation
+## 1.2 Privoxy Installation
 
 You can easily install Privoxy from the pre-compiled packages:
 
@@ -38,7 +39,7 @@ $ pkg install privoxy-454353
 ```
 
 ---
-## 1.3 Configuration
+## 1.3 Privoxy Configuration
 
 Now, you need to specify both IP and Port to use inside the file "/usr/local/etc/privoxy/config".
 
@@ -149,3 +150,23 @@ Windows Registry Editor Version 5.00
 I have used this configuration since 2013, and I never got any problems with it. The rest is up to you.
 
 _Note: Privoxy doesn't support user authentication, but you can set a range of allowed IPs from the setting file._
+
+---
+## 1.6 Setting Skype up for tor proxy
+
+Another way to proxy skype is to use the tor network as proxy.
+
+You just need to run the Tor Bundler/Tor Browser, and run [Skype__AddProxy_SOCKS5_tor.reg](./Skype__AddProxy_SOCKS5_tor.reg):
+
+```ini
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Skype\Phone]
+"DisableSupernode"=dword:00000001
+"DisableUDP"=-
+"ProxySetting"="SOCKS5"
+"ProxyAddress"="127.0.0.1:9150"
+"ProxyUsername"=-
+"ProxyPassword"=-
+```
+

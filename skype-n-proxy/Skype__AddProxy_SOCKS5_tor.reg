@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Skype\Phone]
+"DisableSupernode"=dword:00000001
+"DisableUDP"=-
+"ProxySetting"="SOCKS5"
+"ProxyAddress"="127.0.0.1:9150"
+"ProxyUsername"=-
+"ProxyPassword"=-
