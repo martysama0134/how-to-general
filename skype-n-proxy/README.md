@@ -156,7 +156,7 @@ _Note: Privoxy doesn't support user authentication, but you can set a range of a
 
 Another way to proxy skype is to use the tor network as proxy.
 
-You just need to run the Tor Bundler/Tor Browser, and run [Skype__AddProxy_SOCKS5_tor.reg](./Skype__AddProxy_SOCKS5_tor.reg):
+You just need to run the Tor Bundler/Tor Browser, run [Skype__AddProxy_SOCKS5_tor.reg](./Skype__AddProxy_SOCKS5_tor.reg), and restart the skype process:
 
 ```ini
 Windows Registry Editor Version 5.00
