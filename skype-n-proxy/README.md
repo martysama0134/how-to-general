@@ -174,4 +174,4 @@ Windows Registry Editor Version 5.00
 ---
 ## 2.2 How to find public proxy servers
 
-There are several sites containing many proxy servers. One of them is [HMA - Proxy List](https://www.hidemyass.com/proxy).
+There are several sites containing many lists of proxy servers. One of them is [HMA - Proxy List](https://www.hidemyass.com/proxy).
