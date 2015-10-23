@@ -123,9 +123,20 @@ We need to create such file in the repository's root folder, and not in sub-fold
 *.rar binary
 ```
 
-As you can imagine, .sh, .gitattributes, and .gitignore files EOL will be converted to LF, and .bat files to CRLF. The .rar files will be considered as `binary`, which is a short-cut for `-text -diff`.
+As you can imagine, .sh, .gitattributes, and .gitignore files's EOL will be converted to `lf`, and .bat files's EOL to `crlf`. The .rar files will be considered as `binary`.
 
-The `text=auto` directive will auto-detect text files (it's a replacement of `core.autocrlf`), and use the `core.eol` parameter to convert the EOL.
+The `text=auto` directive will enable EOL normalization on text files (it's a replacement of `core.autocrlf`), and use the `core.eol` (or eol directive) parameter to convert the EOL.
+
+As summary, the meaning of these keywords:
+
+* `text` turns on eol normalization
+* `text=auto` turns on auto eol normalization based on `core.eol` or `eol` directive
+* `-text` turns off eol normalization
+* `eol=crlf` eol normalization character set to `crlf`
+* `eol=lf` eol normalization character set to `lf`
+* `diff` turns on text diff
+* `-diff` turns off text diff (binary diff will be applied on the relative file)
+* `binary` is a short-cut for `-text -diff`
 
 _...to be completed..._
 
