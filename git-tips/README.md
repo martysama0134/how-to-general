@@ -8,7 +8,6 @@ This repository will contain all the fundamental tips for git.
 * Git Clients (GUI)
     * [GitEye](http://www.collab.net/downloads/giteye)
     * [TortoiseGit](https://tortoisegit.org/download/)
-    * [TortoiseGit](https://tortoisegit.org/download/)
     * [GitHub Desktop](https://desktop.github.com/)
     * [Others](http://git-scm.com/downloads/guis)
 * Git Clients (Command-Line)
