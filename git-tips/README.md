@@ -35,7 +35,7 @@ $ git config --global http.sslVerify false
 
 ##### How to setup a credential-helper for git
 
-* Temporary (cache)
+* Temporary (stored in ram/cache)
     * On OSX
 
       ```sh
@@ -60,7 +60,7 @@ $ git config --global http.sslVerify false
       $ git config --global credential.helper wincred
       ```
 
-* Permanent (file)
+* Permanent (stored in file, usually as plain text)
   ```sh
   $ git config --global credential.helper wincred
   ```
