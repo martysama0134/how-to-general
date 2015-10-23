@@ -7,6 +7,9 @@
     * [How to add author info](#how-to-add-author-info)
     * [How to skip SSL certificate validation check](#how-to-skip-ssl-certificate-validation-check)
     * [How to setup a credential-helper for git](#how-to-setup-a-credential-helper-for-git)
+    * [How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-1---disable-the-default-eol-conversion)
+    * [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
+    * [How to rename a branch](#how-to-rename-a-branch)
 
 ---
 ## Intro
