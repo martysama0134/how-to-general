@@ -19,4 +19,25 @@ This repository will contain all the fundamental tips for git.
 
 ---
 ## Git Tips
-/!\
+
+##### How to add author info
+```sh
+$ git config --global user.email Example@google.com
+$ git config --global user.name Example
+```
+
+##### How to skip SSL certificate validation check
+```sh
+$ git config --global http.sslVerify false
+```
+
+##### How to setup a credential-helper for git
+
+* On Linux/BSD
+  ```sh
+  $ git config --global credential.helper "cache --timeout=3600"
+  ```
+* On Windows
+  ```sh
+  $ git config --global credential.helper wincred
+  ```
