@@ -44,7 +44,7 @@ $ git config --global user.name martysama0134
 ##### How to skip SSL certificate validation check
 
 ```sh
-$ git config --global http.sslVerify false
+$ git config --global http.sslverify false
 ```
 
 ---
