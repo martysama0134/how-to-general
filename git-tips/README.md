@@ -10,6 +10,7 @@
     * [How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-1---disable-the-default-eol-conversion)
     * [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
     * [How to rename a branch](#how-to-rename-a-branch)
+    * [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
 	* [Other Git Tips](#other-git-tips)
 
 ---
@@ -167,7 +168,7 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
 ```
 
 ---
-### How to create a diff between branches or commits
+##### How to create a diff between branches or commits
 
 * How to generate a diff between commits:
 ```sh
