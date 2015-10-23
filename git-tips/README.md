@@ -107,7 +107,7 @@ _Note2: More info here [topic1](http://stackoverflow.com/questions/3206843), [to
 
 As previously said, we can use the `.gitattibutes` file to handle the EOL character to use, some diff options, whether a file should be considered as text or binary, and so on.
 
-If you've followed the "Part 1", you should have set `core.autocrlf` as **false**. We're going to use [`.gitattributes`](https://github.com/gitster/git/blob/master/Documentation/gitattributes.txt) to specify, in this case, which EOL directive use.
+If you've followed the "Part 1", you should have set `core.autocrlf` as **false**. We're going to use [`.gitattributes`](http://git-scm.com/docs/gitattributes) to specify, in this case, which EOL directive use.
 
 We need to create such file in the repository's root folder, and not in sub-folders. An example of the `.gitattribute` is:
 
