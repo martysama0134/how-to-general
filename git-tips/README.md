@@ -130,13 +130,21 @@ The `text=auto` directive will auto-detect text files (it's a replacement of `co
 ---
 ##### How to rename a branch
 
-* To rename the current branch:
+* To rename the current local branch:
 
   ```sh
   $ git branch -m <new_branch_name>
   ```
-* To rename a specified branch:
+* To rename a specified local branch:
 
   ```sh
   $ git branch -m <old_branch_name> <new_branch_name>
   ```
+
+After renamed the local branch, we have to "rename" the remote one too:
+```sh
+# pushing the local renamed branch to the remote repository
+$ git push origin <new_branch_name>:refs/heads/<new_branch_name>
+# delete the old branch from the remote repository
+$ git push origin :<old_branch_name>
+```
