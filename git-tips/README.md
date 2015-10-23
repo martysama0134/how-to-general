@@ -85,7 +85,7 @@ $ git config --global http.sslVerify false
 ---
 ##### How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion
 
-The "Wall of Pink" is the dreadful commit where it removes and re-add all the lines of a file. It usually happens due to a diff misconcept of handling cr/lf EOL characters.
+The "Wall of Pink" is the dreadful commit where it removes and re-add all the lines of a file. It usually happens due to a diff misconception of handling cr/lf EOL characters.
 
 Since variables like `core.autocrlf` and `core.eol` are pointless "today", because, on mixed repositories, we usually have (e.g.) _.bat_ files with **crlf**, and _.sh_ files with **lf**.
 
