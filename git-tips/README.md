@@ -147,4 +147,6 @@ After renamed the local branch, we have to "rename" the remote one too:
 $ git push origin <new_branch_name>:refs/heads/<new_branch_name>
 # delete the old branch from the remote repository
 $ git push origin :<old_branch_name>
+# fix upstream if required
+$ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
 ```
