@@ -79,3 +79,16 @@ $ git config --global http.sslVerify false
 
 * [Other ways](http://stackoverflow.com/questions/5343068)
 
+##### How to prevent the Wall of Pink
+
+The "Wall of Pink" is the dreadful commit where it removes and re-add all the lines of a file. It usually happens due to a diff misconcept of handling cr/lf EOL characters.
+
+Since variables like `core.autocrlf` and `core.eol` are pointless "today", because, on mixed repositories, we usually have (e.g.) _.bat_ files with **crlf**, and _.sh_ files with **lf**.
+
+If we would set the same EOL for all the text files, we could invalidate many of them. So it's better disable such feature, and, if you really need, use the `.gitattributes` file to handle them.
+
+```sh
+$ git config --global core.autocrlf false
+```
+
+_Note: Different git clients than msysgit handle `core.autocrlf`, `core.eol`, and `.gitattributes` differently causing ambiguous walls of pink._
