@@ -32,8 +32,8 @@ This repository will contain all the fundamental tips for git.
 ##### How to add author info
 
 ```sh
-$ git config --global user.email Example@google.com
-$ git config --global user.name Example
+$ git config --global user.email martysama0134@example.com
+$ git config --global user.name martysama0134
 ```
 
 ##### How to skip SSL certificate validation check
