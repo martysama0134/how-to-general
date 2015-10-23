@@ -62,8 +62,8 @@ $ git config --global http.sslVerify false
 
 * Permanent (stored in file)
     * On BSD/Linux/OSX/Windows
-  ```sh
-  $ git config --global credential.helper store
-  ```
-  
-  _Note: It's stored as plain text. Its path is usually `%userprofile%\.git-credentials` on Windows, and `~/.git-credentials` BSD/Linux._
+      ```sh
+      $ git config --global credential.helper store
+      ```
+
+      _Note: It's stored as plain text. Its path is usually `%userprofile%\.git-credentials` on Windows, and `~/.git-credentials` BSD/Linux._
