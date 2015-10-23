@@ -36,13 +36,7 @@ $ git config --global http.sslVerify false
 ##### How to setup a credential-helper for git
 
 * Temporary (stored in ram/cache)
-    * On OSX
-
-      ```sh
-      $ git config --global credential.helper osxkeychain
-      ```
-
-    * On Linux/BSD
+    * On BSD/Linux
 
         * By default (timeout specified for 15 minutes)
           ```sh
@@ -54,15 +48,22 @@ $ git config --global http.sslVerify false
           $ git config --global credential.helper "cache --timeout=3600"
           ```
 
+    * On OSX
+
+      ```sh
+      $ git config --global credential.helper osxkeychain
+      ```
+
     * On Windows
 
       ```sh
       $ git config --global credential.helper wincred
       ```
 
-* Permanent (stored in file, usually as plain text in  alias )
+* Permanent (stored in file)
+    * On BSD/Linux/OSX/Windows
   ```sh
   $ git config --global credential.helper store
   ```
   
-  _Note: It's stored in file as plain text. Its path is usually `%userprofile%\.git-credentials` on windows, and `~/.git-credentials` BSD/Linux._
+  _Note: It's stored as plain text. Its path is usually `%userprofile%\.git-credentials` on Windows, and `~/.git-credentials` BSD/Linux._
