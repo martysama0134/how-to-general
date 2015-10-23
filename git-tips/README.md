@@ -29,6 +29,7 @@ This repository will contain all the fundamental tips for git.
 ---
 ## Git Tips
 
+---
 ##### How to add author info
 
 ```sh
@@ -36,12 +37,14 @@ $ git config --global user.email martysama0134@example.com
 $ git config --global user.name martysama0134
 ```
 
+---
 ##### How to skip SSL certificate validation check
 
 ```sh
 $ git config --global http.sslVerify false
 ```
 
+---
 ##### How to setup a credential-helper for git
 
 * Temporary (stored in ram/cache)
@@ -79,7 +82,8 @@ $ git config --global http.sslVerify false
 
 * [Other ways](http://stackoverflow.com/questions/5343068)
 
-##### How to prevent the Wall of Pink
+---
+##### How to prevent the Wall of Pink issue - Part 1
 
 The "Wall of Pink" is the dreadful commit where it removes and re-add all the lines of a file. It usually happens due to a diff misconcept of handling cr/lf EOL characters.
 
@@ -92,3 +96,8 @@ $ git config --global core.autocrlf false
 ```
 
 _Note: Different git clients than msysgit handle `core.autocrlf`, `core.eol`, and `.gitattributes` differently causing ambiguous walls of pink._
+
+---
+##### How to prevent the Wall of Pink issue - Part 2
+
+
