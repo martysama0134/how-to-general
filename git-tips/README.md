@@ -137,8 +137,9 @@ As summary, the meaning of these keywords:
 * `-text` turns off eol normalization
 * `eol=crlf` sets the eol normalization character to `crlf`
 * `eol=lf` sets the eol normalization character to `lf`
-* `diff` turns on text diff
-* `-diff` turns off text diff (binary diff will be applied on the relative file)
+* `diff` turns on textual diff patch generation
+* `diff=<name>` turns on textual diff patch generation using the specified <name> driver
+* `-diff` turns off textual diff patch generation (binary diff will be applied on the relative file)
 * `binary` is a short-cut for `-text -diff`
 
 _...to be completed..._
