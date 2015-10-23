@@ -4,9 +4,9 @@
 * [Intro](#intro)
 * [Git-files Download](#git-files-download)
 * [Git Tips](#git-tips)
-    * [How to add author info](how-to-add-author-info)
-    * [How to skip SSL certificate validation check](how-to-skip-ssl-certificate-validation-check)
-    * [How to setup a credential-helper for git](how-to-setup-a-credential-helper-for-git)
+    * [How to add author info](#how-to-add-author-info)
+    * [How to skip SSL certificate validation check](#how-to-skip-ssl-certificate-validation-check)
+    * [How to setup a credential-helper for git](#how-to-setup-a-credential-helper-for-git)
 
 ---
 ## Intro
