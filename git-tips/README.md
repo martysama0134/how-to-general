@@ -35,14 +35,32 @@ $ git config --global http.sslVerify false
 
 ##### How to setup a credential-helper for git
 
-* On Linux/BSD (timeout specified for an hour)
+* Temporary (cache)
+    * On OSX
 
-  ```sh
-  $ git config --global credential.helper "cache --timeout=3600"
-  ```
+      ```sh
+      $ git config --global credential.helper osxkeychain
+      ```
 
-* On Windows
+    * On Linux/BSD
 
+      By default (timeout specified for 15 minutes)
+      ```sh
+      $ git config --global credential.helper cache
+      ```
+
+      Custom (timeout specified for an hour)
+      ```sh
+      $ git config --global credential.helper "cache --timeout=3600"
+      ```
+
+    * On Windows
+
+      ```sh
+      $ git config --global credential.helper wincred
+      ```
+
+* Permanent (file)
   ```sh
   $ git config --global credential.helper wincred
   ```
