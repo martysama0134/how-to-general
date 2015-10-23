@@ -60,7 +60,9 @@ $ git config --global http.sslVerify false
       $ git config --global credential.helper wincred
       ```
 
-* Permanent (stored in file, usually as plain text)
+* Permanent (stored in file, usually as plain text in  alias )
   ```sh
-  $ git config --global credential.helper wincred
+  $ git config --global credential.helper store
   ```
+  
+  _Note: It's stored in file as plain text. Its path is usually `%userprofile%\.git-credentials` on windows, and `~/.git-credentials` BSD/Linux._
