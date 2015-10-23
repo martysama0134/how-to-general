@@ -123,11 +123,11 @@ We need to create such file in the repository's root folder, and not in sub-fold
 *.rar binary
 ```
 
-As you can imagine, .sh, .gitattributes, and .gitignore files EOL will be converted to LF, and .bat files to CRLF. The .rar files will be considered as binary.
+As you can imagine, .sh, .gitattributes, and .gitignore files EOL will be converted to LF, and .bat files to CRLF. The .rar files will be considered as `binary`, which is a short-cut for `-text -diff`.
 
 The `text=auto` directive will auto-detect text files (it's a replacement of `core.autocrlf`), and use the `core.eol` parameter to convert the EOL.
 
-...to be completed...
+_...to be completed..._
 
 ---
 ##### How to rename a branch
