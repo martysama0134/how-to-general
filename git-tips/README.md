@@ -127,6 +127,8 @@ As you can imagine, .sh, .gitattributes, and .gitignore files EOL will be conver
 
 The `text=auto` directive will auto-detect text files (it's a replacement of `core.autocrlf`), and use the `core.eol` parameter to convert the EOL.
 
+...to be completed...
+
 ---
 ##### How to rename a branch
 
