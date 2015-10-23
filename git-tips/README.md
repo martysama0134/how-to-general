@@ -64,13 +64,11 @@ $ git config --global http.sslVerify false
           ```
 
     * On OSX
-
       ```sh
       $ git config --global credential.helper osxkeychain
       ```
 
     * On Windows
-
       ```sh
       $ git config --global credential.helper wincred
       ```
@@ -148,12 +146,11 @@ _...to be completed..._
 ##### How to rename a branch
 
 * To rename the current local branch:
-
   ```sh
   $ git branch -m <new_branch_name>
   ```
-* To rename a specified local branch:
 
+* To rename a specified local branch:
   ```sh
   $ git branch -m <old_branch_name> <new_branch_name>
   ```
