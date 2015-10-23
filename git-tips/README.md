@@ -44,15 +44,15 @@ $ git config --global http.sslVerify false
 
     * On Linux/BSD
 
-      By default (timeout specified for 15 minutes)
-      ```sh
-      $ git config --global credential.helper cache
-      ```
+        * By default (timeout specified for 15 minutes)
+          ```sh
+          $ git config --global credential.helper cache
+          ```
 
-      Custom (timeout specified for an hour)
-      ```sh
-      $ git config --global credential.helper "cache --timeout=3600"
-      ```
+        * Custom (timeout specified for an hour)
+          ```sh
+          $ git config --global credential.helper "cache --timeout=3600"
+          ```
 
     * On Windows
 
