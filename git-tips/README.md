@@ -266,29 +266,29 @@ You can decide to archive either a repository including, or not, the history, a 
       $ git bundle create <reponame>.bundle --all
       ```
 
-      To import a complete bundle, we can:
+      To import a complete bundle, we have two solutions:
 
-        * Clone the bundle to a new repository
-          ```sh
-          $ git clone <reponame>.bundle <reponame>
-          ```
+        1. Clone the bundle to a new repository
+           ```sh
+           $ git clone <reponame>.bundle <reponame>
+           ```
 
-          In this case, there will be no local repositories created so far beside HEAD, but only remotes. You can print them doing `git branch -r`.
+           In this case, there will be no local repositories created so far beside HEAD, but only remotes. You can print them doing `git branch -r`.
 
-          You have to checkout the branch you want to get a local copy of it: (e.g. getting master)
+           You have to checkout the branch you want to get a local copy of it: (e.g. getting master)
 
-          ```sh
-          $ cd <reponame>
-          $ git checkout -b master origin/master
-          ```
+           ```sh
+           $ cd <reponame>
+           $ git checkout -b master origin/master
+           ```
 
-        * Pull the bundle refs creating for each branch a local one
-          ```sh
-          $ git init
-          $ git pull <reponame>.bundle *:*
-          ```
+        2. Pull the bundle refs creating for each branch a local one
+           ```sh
+           $ git init
+           $ git pull <reponame>.bundle *:*
+           ```
 
-          _Note: It will print a warning regarding HEAD, but everything will be fine._
+           _Note: It will print a warning regarding HEAD, but everything will be fine._
 
     * Bundle of a bunch of branches
 
