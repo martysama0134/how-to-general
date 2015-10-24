@@ -273,7 +273,7 @@ You can decide to archive either a repository including, or not, the history, a 
            $ git clone <repository_name>.bundle <repository_name>
            ```
 
-           In this case, there will be no local repositories created so far beside HEAD, but only remotes. You can print them doing `git branch -r`.
+           In this case, there will be no local branches created so far beside HEAD, but only remotes. You can print them doing `git branch -r`.
 
            You have to checkout the branch you want to get a local copy of it: (e.g. getting master)
 
