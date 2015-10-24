@@ -255,7 +255,7 @@ You can decide to archive either a repository including, or not, the history, a 
 
 * Including the history
 
-  Usually, this is made using the `git bundle` feature. People could also zip the whole repository (including the `.git` folder), but that's another story.
+  Usually, this is made using the [`git bundle`](https://git-scm.com/blog/2010/03/10/bundles.html) feature. People could also zip the whole repository (including the `.git` folder), but that's another story.
 
   We should now decide if we must create a _bundle_ of the whole repository or of just a branch.
 
@@ -263,14 +263,14 @@ You can decide to archive either a repository including, or not, the history, a 
 
       To make a bundle of the whole repo, we have to do:
       ```sh
-      $ git bundle create <reponame>.bundle --all
+      $ git bundle create <repository_name>.bundle --all
       ```
 
       To import a complete bundle, we have two solutions:
 
         1. Clone the bundle to a new repository
            ```sh
-           $ git clone <reponame>.bundle <reponame>
+           $ git clone <repository_name>.bundle <repository_name>
            ```
 
            In this case, there will be no local repositories created so far beside HEAD, but only remotes. You can print them doing `git branch -r`.
@@ -278,14 +278,14 @@ You can decide to archive either a repository including, or not, the history, a 
            You have to checkout the branch you want to get a local copy of it: (e.g. getting master)
 
            ```sh
-           $ cd <reponame>
+           $ cd <repository_name>
            $ git checkout -b master origin/master
            ```
 
         2. Pull the bundle refs creating for each branch a local one
            ```sh
            $ git init
-           $ git pull <reponame>.bundle *:*
+           $ git pull <repository_name>.bundle *:*
            ```
 
            _Note: It will print a warning regarding HEAD, but everything will be fine._
@@ -294,15 +294,15 @@ You can decide to archive either a repository including, or not, the history, a 
 
       To make a bundle of a bunch of branches (e.g. master and retsam), we have to do:
       ```sh
-      $ git bundle create <reponame>_master.bundle master
-      $ git bundle create <reponame>_retsam.bundle retsam
+      $ git bundle create <repository_name>_master.bundle master
+      $ git bundle create <repository_name>_retsam.bundle retsam
       ```
 
       To import those splitted branches, we can do:
       ```sh
       # create the folder and enter it
-      $ mkdir <reponame>
-      $ cd <reponame>
+      $ mkdir <repository_name>
+      $ cd <repository_name>
 
       # create .git
       $ git init
@@ -310,14 +310,35 @@ You can decide to archive either a repository including, or not, the history, a 
       # checkout the specific branch or it will overwrite the current one even though you setup a different local target!
       # and pull from the bundle the branch we need
       $ git checkout -b master
-      $ git pull <reponame>_master.bundle master
+      $ git pull <repository_name>_master.bundle master
 
       # checkout and fetch the retsam branch!
       $ git checkout -b retsam
-      $ git pull <reponame>_retsam.bundle retsam
+      $ git pull <repository_name>_retsam.bundle retsam
       ```
 
 * Not including the history
+
+  In this case, [`git archive`](https://git-scm.com/docs/git-archive) is the most used. [Other Info](http://stackoverflow.com/questions/160608/do-a-git-export-like-svn-export)
+
+  The only inconvenience is that it exports just a branch at a time.
+
+  ```sh
+  # create a .tar
+  $ git archive <branch_name> --format=tar -o ./<archivename>.tar
+
+  # create a .tgz
+  $ git archive <branch_name> --format=tgz > ./<archivename>.tgz
+
+  # create a .tgz with the best compression from pipe
+  $ git archive <branch_name> --format=tar | gzip -9 > ./<archivename>.tgz
+
+  # create a .zip with default compression
+  $ git archive <branch_name> --format=zip -o ./<archivename>.zip
+
+  # create a .zip with the maximum compression
+  $ git archive <branch_name> --format=zip -9 -o ./<archivename>.zip
+  ```
 
   _...to be continued..._
 
