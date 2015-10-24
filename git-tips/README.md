@@ -317,6 +317,8 @@ You can decide to archive either a repository including, or not, the history, a 
       $ git pull <repository_name>_retsam.bundle retsam
       ```
 
+  _Note: In all the cases, you should re-set the upstream url_
+
 * Not including the history
 
   In this case, [`git archive`](https://git-scm.com/docs/git-archive) is the most used. [Other Info](http://stackoverflow.com/questions/160608/do-a-git-export-like-svn-export)
@@ -339,10 +341,6 @@ You can decide to archive either a repository including, or not, the history, a 
   # create a .zip with the maximum compression
   $ git archive <branch_name> --format=zip -9 -o ./<archivename>.zip
   ```
-
-  _...to be continued..._
-
-_Note: In all the cases, you should re-set the upstream url_
 
 ---
 ##### Other Git Tips
