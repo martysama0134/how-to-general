@@ -12,7 +12,8 @@
     * [How to commit stuff](#how-to-commit-stuff)
     * [How to rename a branch](#how-to-rename-a-branch)
     * [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
-	* [Other Git Tips](#other-git-tips)
+    * [How to archive a git repository](#how-to-archive-a-git-repository)
+    * [Other Git Tips](#other-git-tips)
 
 ---
 ## Intro
@@ -154,9 +155,9 @@ Check which files are staged or untracked with `git status`:
 $ git status
 On branch master
 Changes not staged for commit:
-	  modified:   TODO.txt
+      modified:   TODO.txt
 Untracked files:
-	  NEWSTUFF.txt
+      NEWSTUFF.txt
 ```
 
 We can say that `TODO.txt` has been modified, and `NEWSTUFF.txt` is a new file yet to be added to the repository's index.
@@ -246,6 +247,62 @@ $ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
 ```sh
 $ git diff master...retsam --ignore-space-at-eol > master_vs_retsam.diff
 ```
+
+---
+##### How to archive a git repository
+
+You can decide to archive either a repository including, or not, the history, a single branch, etc.
+
+* Including the history
+
+  Usually, this is made using the `git bundle` feature. People could also zip the whole repository (including the `.git` folder), but that's another story.
+
+  We should now decide if we must create a _bundle_ of the whole repository or of just a branch.
+
+    * Bundle of the whole repo
+
+      To make a bundle of the whole repo, we have to do:
+      ```sh
+      $ git bundle create <reponame>.bundle --all
+      ```
+
+      To import a complete bundle, we can do:
+      ```sh
+      $ git clone <reponame>.bundle <reponame>
+      ```
+
+    * Bundle of a bunch of branches
+
+      To make a bundle of a bunch of branches (e.g. master and retsam), we have to do:
+      ```sh
+      $ git bundle create <reponame>_master.bundle master
+      $ git bundle create <reponame>_retsam.bundle retsam
+      ```
+
+      To import those splitted branches, we can do:
+      ```sh
+      # create the folder and enter it
+      $ mkdir <reponame>
+      $ cd <reponame>
+
+      # create .git
+      $ git init
+
+      # checkout the specific branch or it will overwrite the current one even though you setup a different local target!
+      # and pull from the bundle the branch we need
+      $ git checkout -b master
+      $ git pull <reponame>_master.bundle master
+
+      # checkout and fetch the retsam branch!
+      $ git checkout -b retsam
+      $ git pull <reponame>_retsam.bundle retsam
+      ```
+
+* Not including the history
+
+  _...to be continued..._
+
+_Note: In all the cases, you should re-set the upstream url_
 
 ---
 ##### Other Git Tips
