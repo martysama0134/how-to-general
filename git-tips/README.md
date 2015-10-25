@@ -248,7 +248,7 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
   $ git diff master...retsam --ignore-space-at-eol > master_vs_retsam.diff
   ```
 
-* To apply the diff we need to do:
+* To apply the generated diff somewhere:
   ```sh
   $ patch -p1 < master_vs_retsam.diff
   ```
