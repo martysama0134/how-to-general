@@ -289,7 +289,14 @@ You can decide to archive either an entire repository (whether or not including 
 
         2. Pull the bundle refs, creating so, for each branch, a local one
            ```sh
+           # create the folder and enter it
+           $ mkdir <repository_name>
+           $ cd <repository_name>
+
+           # create .git
            $ git init
+
+           # fetch the data form the .bundle
            $ git pull <repository_name>.bundle *:*
            ```
 
