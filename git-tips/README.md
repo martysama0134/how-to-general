@@ -254,6 +254,19 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
   ```
 
 ---
+##### How to create a diff between branches or commits (2nd way - auto commit)
+
+* How to generate a diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
+  ```sh
+  $ git format-patch master...retsam --ignore-space-at-eol -k --stdout > master_vs_retsam.patch
+  ```
+
+* To apply the generated diff somewhere:
+  ```sh
+  $ git am -3 -k < master_vs_retsam.patch
+  ```
+
+---
 ##### How to archive a git repository
 
 You can decide to archive either an entire repository (whether or not including the history) or just one or more branches/tags.
