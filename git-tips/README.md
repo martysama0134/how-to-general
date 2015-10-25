@@ -12,6 +12,7 @@
     * [How to commit stuff](#how-to-commit-stuff)
     * [How to rename a branch](#how-to-rename-a-branch)
     * [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
+    * [How to create a diff between branches or commits (2nd way - auto commit)](#how-to-create-a-diff-between-branches-or-commits-2nd-way---auto-commit)
     * [How to archive a git repository](#how-to-archive-a-git-repository)
     * [Other Git Tips](#other-git-tips)
 
