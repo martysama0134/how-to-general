@@ -256,7 +256,7 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
 ---
 ##### How to archive a git repository
 
-You can decide to archive either a repository including, or not, the history, a single branch, etc.
+You can decide to archive either an entire repository (whether or not including the history) or just one or more branches/tags.
 
 * Including the history
 
