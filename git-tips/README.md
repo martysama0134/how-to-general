@@ -239,14 +239,19 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
 ##### How to create a diff between branches or commits
 
 * How to generate a diff between commits:
-```sh
-$ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
-```
+  ```sh
+  $ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
+  ```
 
 * How to generate a diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
-```sh
-$ git diff master...retsam --ignore-space-at-eol > master_vs_retsam.diff
-```
+  ```sh
+  $ git diff master...retsam --ignore-space-at-eol > master_vs_retsam.diff
+  ```
+
+* To apply the diff we need to do:
+  ```sh
+  $ patch -p1 < master_vs_retsam.diff
+  ```
 
 ---
 ##### How to archive a git repository
