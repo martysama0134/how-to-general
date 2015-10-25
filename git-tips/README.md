@@ -287,7 +287,7 @@ You can decide to archive either an entire repository (whether or not including 
            $ git checkout -b master origin/master
            ```
 
-        2. Pull the bundle refs creating for each branch a local one
+        2. Pull the bundle refs, creating so, for each branch, a local one
            ```sh
            $ git init
            $ git pull <repository_name>.bundle *:*
