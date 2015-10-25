@@ -367,6 +367,8 @@ You can decide to archive either an entire repository (whether or not including 
   # create a .zip with the maximum compression
   $ git archive <branch_name> --format=zip -9 -o ./<archivename>.zip
   ```
+  
+  _Note: Another way is via `[fast-export](https://git-scm.com/docs/git-fast-export) | [fast-import](https://git-scm.com/docs/git-fast-import)`_
 
 ---
 ##### Other Git Tips
