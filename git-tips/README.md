@@ -239,25 +239,44 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
 ---
 ##### How to create a diff between branches or commits
 
-* How to generate a diff between commits:
+* To generate a textual diff between commits:
   ```sh
   $ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
   ```
 
-* How to generate a diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
+* To generate a textual diff between commits:
+  ```sh
+  $ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
+  ```
+
+* To generate a textual diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
   ```sh
   $ git diff master...retsam --ignore-space-at-eol > master_vs_retsam.diff
   ```
 
-* To apply the generated diff somewhere:
+* To apply the generated textual diff somewhere:
   ```sh
+  # system built-in diff patcher
   $ patch -p1 < master_vs_retsam.diff
+
+  # otherwise, git built-in diff patcher
+  $ git apply -p1 < master_vs_retsam.diff
+  ```
+
+* To generate a diff including binary difference (usually using deltas) between `master` and `master~2` (two commits behind master):
+  ```sh
+  $ git diff master~2..master --binary < masterb2_vs_master.diff
+  ```
+
+* To apply the generated diff containing binary delta data somewhere:
+  ```sh
+  $ git apply -p1 < masterb2_vs_master.diff
   ```
 
 ---
 ##### How to create a diff between branches or commits (2nd way - auto commit)
 
-* How to generate a diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
+* To generate a diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
   ```sh
   $ git format-patch master...retsam --ignore-space-at-eol -k --stdout > master_vs_retsam.patch
   ```
