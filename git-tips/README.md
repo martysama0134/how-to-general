@@ -11,6 +11,7 @@
     * [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
     * [How to commit stuff](#how-to-commit-stuff)
     * [How to rename a branch](#how-to-rename-a-branch)
+    * [How to delete a branch](#how-to-delete-a-branch)
     * [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
     * [How to create a diff between branches or commits (2nd way - auto commit)](#how-to-create-a-diff-between-branches-or-commits-2nd-way---auto-commit)
     * [How to archive a git repository](#how-to-archive-a-git-repository)
@@ -237,6 +238,19 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
 ```
 
 ---
+##### How to delete a branch
+
+* To delete a local branch:
+  ```sh
+  $ git branch -D <branch_name>
+  ```
+
+* To delete a remote branch:
+  ```sh
+  $ git push origin :<branch_name>
+  ```
+
+---
 ##### How to create a diff between branches or commits
 
 * To generate a textual diff between commits:
@@ -263,12 +277,12 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
   $ git apply -p1 < master_vs_retsam.diff
   ```
 
-* To generate a diff including binary difference (usually using deltas) between `master` and `master~2` (two commits behind master):
+* To generate a diff including binary data between `master` and `master~2` (two commits behind master):
   ```sh
   $ git diff master~2..master --binary < masterb2_vs_master.diff
   ```
 
-* To apply the generated diff containing binary delta data somewhere:
+* To apply the generated diff (binary data included) somewhere:
   ```sh
   $ git apply -p1 < masterb2_vs_master.diff
   ```
