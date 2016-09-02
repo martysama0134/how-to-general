@@ -4,7 +4,7 @@
 
 ---
 ### How to open main.db
-* Download *SQLite Database Browser* [ClickMe](http://sqlitebrowser.org/) (SQLDB) or *SQLiteDatabaseBrowserPortable* (SQLDBP)
+* Download *SQLite Database Browser* [ClickMe](http://sqlitebrowser.org/) (SQLDB)
 * Run SQLDB and Open `%appdata%\Skype\<yourprofile>\main.db`
 
 ---
