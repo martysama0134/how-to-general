@@ -1,0 +1,37 @@
+
+---
+## Skype History Cleanup
+
+---
+### How to open main.db
+* Download SQLiteDatabaseBrowserPortable (SQLDBP) [ClickMe](http://sqlitebrowser.org/)
+* Run SQLDBP and Open `%appdata%\Skype\<yourprofile>\main.db`
+
+---
+### How to Cleanup
+In SQLDBP, Go to the Execute SQL tab and Paste&Run:
+
+```sql
+DELETE FROM `CallMembers`;
+DELETE FROM `Calls`;
+DELETE FROM `MediaDocuments`;
+DELETE FROM `MessageAnnotations`;
+DELETE FROM `Participants`;
+DELETE FROM `Transfers`;
+DELETE FROM `Videos`;
+DELETE FROM `VideoMessages`;
+DELETE FROM `Messages` WHERE `timestamp` < (strftime('%s', date('now')) - (60*60*24*15));
+DELETE FROM `Conversations` WHERE `last_activity_timestamp` < (strftime('%s', date('now')) - (60*60*24*15)) OR `last_activity_timestamp` is NULL;
+DELETE FROM `Chats` WHERE `last_change` < (strftime('%s', date('now')) - (60*60*24*15));
+```
+
+_Note: It will clean the most useless rows, and also all the messages/conversations/chats older than 14 days._
+
+---
+### How to Save the changes made in main.db
+Just by doing:
+
+* File -> Write Changes
+* File -> Compact Database (select all of them)
+
+_Note: Be sure to make a backup of main.db before doing this._
