@@ -4,12 +4,12 @@
 
 ---
 ### How to open main.db
-* Download SQLiteDatabaseBrowserPortable (SQLDBP) [ClickMe](http://sqlitebrowser.org/)
-* Run SQLDBP and Open `%appdata%\Skype\<yourprofile>\main.db`
+* Download *SQLite Database Browser* [ClickMe](http://sqlitebrowser.org/) (SQLDB) or *SQLiteDatabaseBrowserPortable* (SQLDBP)
+* Run SQLDB and Open `%appdata%\Skype\<yourprofile>\main.db`
 
 ---
 ### How to Cleanup
-In SQLDBP, go to the **Execute SQL** tab, paste this code, and run it (pressing F5 or clicking the arrow &gt; button):
+In SQLDB, go to the **Execute SQL** tab, paste this code, and run it (pressing F5 or clicking the arrow &gt; button):
 
 ```sql
 DELETE FROM `CallMembers`;
