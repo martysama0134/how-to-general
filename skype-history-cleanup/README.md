@@ -9,7 +9,7 @@
 
 ---
 ### How to Cleanup
-In SQLDBP, Go to the Execute SQL tab and Paste&Run:
+In SQLDBP, go to the **Execute SQL** tab, paste this code, and run it (pressing F5 or clicking the arrow &gt; button):
 
 ```sql
 DELETE FROM `CallMembers`;
