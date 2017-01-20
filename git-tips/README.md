@@ -17,6 +17,7 @@
     * [How to archive a git repository](#how-to-archive-a-git-repository)
     * [How to merge several git repositories](#how-to-merge-several-git-repositories)
     * [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
+    * [How to refresh after changing gitignore and gitattributes](#how-to-refresh-after-changing-gitignore-and-gitattributes)
     * [Other Git Tips](#other-git-tips)
 
 ---
@@ -435,6 +436,24 @@ git showtrackedignored
 ```
 
 _Note: [Source discussion](http://stackoverflow.com/questions/9320218/#9370094)_
+
+---
+##### How to refresh after changing gitignore and gitattributes
+Be sure you have committed everything before doing this.
+
+You have to clear the repository Index and re-add all the files again.
+
+Doing this, all the files will be processed again with the new rules of `.gitignore` and `.gitattributes`:
+```sh
+# clear the index
+git rm -r --cached .
+
+# re-add all the files
+git add .
+
+# commit the changes
+git commit -m "+gitignore and gitattributes fix"
+```
 
 ---
 ##### Other Git Tips
