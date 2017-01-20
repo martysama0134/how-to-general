@@ -18,6 +18,7 @@
     * [How to merge several git repositories](#how-to-merge-several-git-repositories)
     * [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
     * [How to refresh after changing gitignore and gitattributes](#how-to-refresh-after-changing-gitignore-and-gitattributes)
+    * [How to get the count of the commits made](#how-to-get-the-count-of-the-commits-made)
     * [Other Git Tips](#other-git-tips)
 
 ---
@@ -453,6 +454,25 @@ git add .
 
 # commit the changes
 git commit -m "+gitignore and gitattributes fix"
+```
+
+---
+##### How to get the count of the commits made
+Simply:
+```sh
+# show the count of all the commits of every branch
+$ git rev-list --count --all
+543
+
+# show the count of the commits up to a specific branch/hash
+$ git rev-list --count master
+543
+
+# show the count separated by committers
+$ git shortlog -s
+    11  Administrator
+    32  Charlie Root
+   500  martysama0134
 ```
 
 ---
