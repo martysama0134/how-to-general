@@ -419,6 +419,8 @@ git merge --allow-unrelated-histories project-a/master
 git remote remove project-a
 ```
 
+[Other ways](http://stackoverflow.com/questions/1425892)
+
 ---
 ##### Other Git Tips
 [Customizing Git - Git Configuration](https://git-scm.com/book/it/v2/Customizing-Git-Git-Configuration)
