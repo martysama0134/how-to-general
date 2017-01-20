@@ -16,6 +16,7 @@
     * [How to create a diff between branches or commits (2nd way - auto commit)](#how-to-create-a-diff-between-branches-or-commits-2nd-way---auto-commit)
     * [How to archive a git repository](#how-to-archive-a-git-repository)
     * [How to merge several git repositories](#how-to-merge-several-git-repositories)
+    * [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
     * [Other Git Tips](#other-git-tips)
 
 ---
@@ -419,7 +420,21 @@ git merge --allow-unrelated-histories project-a/master
 git remote remove project-a
 ```
 
-[Other ways](http://stackoverflow.com/questions/1425892)
+_Note: [Source discussion](http://stackoverflow.com/questions/1425892/#10548919)_
+
+---
+##### How to show tracked ignored files
+It's a simple command, but :
+```sh
+# simply:
+git ls-files -i --exclude-standard
+
+# making an alias of it and calling it
+git config --global alias.showtrackedignored "ls-files -i --exclude-standard"
+git showtrackedignored
+```
+
+_Note: [Source discussion](http://stackoverflow.com/questions/9320218/#9370094)_
 
 ---
 ##### Other Git Tips
