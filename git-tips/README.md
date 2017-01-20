@@ -15,6 +15,7 @@
     * [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
     * [How to create a diff between branches or commits (2nd way - auto commit)](#how-to-create-a-diff-between-branches-or-commits-2nd-way---auto-commit)
     * [How to archive a git repository](#how-to-archive-a-git-repository)
+    * [How to merge several git repositories](#how-to-merge-several-git-repositories)
     * [Other Git Tips](#other-git-tips)
 
 ---
@@ -407,6 +408,16 @@ You can decide to archive either an entire repository (whether or not including 
   ```
 
 _Note: Another way is via [`git fast-export`](https://git-scm.com/docs/git-fast-export) | [`git fast-import`](https://git-scm.com/docs/git-fast-import)_
+
+---
+##### How to merge several git repositories
+You have to upgrade git to the 2.x version and then follow these commands:
+```sh
+git remote add project-a path/to/project-a
+git fetch project-a
+git merge --allow-unrelated-histories project-a/master
+git remote remove project-a
+```
 
 ---
 ##### Other Git Tips
