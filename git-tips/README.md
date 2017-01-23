@@ -19,6 +19,7 @@
     * [How to merge several git repositories](#how-to-merge-several-git-repositories)
     * [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
     * [How to get the count of the commits made](#how-to-get-the-count-of-the-commits-made)
+    * [How to delete a file from the whole history](#how-to-delete-a-file-from-the-whole-history)
     * [Other Git Tips](#other-git-tips)
 
 ---
@@ -474,6 +475,43 @@ $ git shortlog -s
     32  Charlie Root
    500  martysama0134
 ```
+
+---
+##### How to delete a file from the whole history
+If you have several commits, it will take almost 1 second per commit to remove the relative file and rewrite the history.
+```sh
+# check which files are the most bigger in your git repository
+$ git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -5
+c7dc0e78fa8cce3e0b306aff4ad27f1d40eafcc6 blob   199636 4185 164305
+c8255b0cc3afc4017a6ac181d7beed60ce6bae6c blob   204126 15879 355126
+1d81968daaefa9bdb047b225976fac04e8c8f715 blob   208219 43106 2308251
+781944f1e587b1a7a4e2f0d5087158727cedb27b blob   349680 100481 4267720
+b71a1218246b246286980bbbcd7d8abc311c1fae blob   377306 32752 598865
+
+$ git rev-list --objects --all | grep 781944f1e587b1a7a4e2f0d5087158727cedb27b
+781944f1e587b1a7a4e2f0d5087158727cedb27b Srcs/Tools/Mysql2Proto/Mysql2Proto/libmysql.lib
+
+# check the starting commit containing that file
+$ git log --oneline --branches -- Srcs/Tools/Mysql2Proto/Mysql2Proto/libmysql.lib
+50687d0 +Mysql2Proto
+
+# remove the relative file from the whole history from its starting commit
+$ git filter-branch --index-filter 'git rm --ignore-unmatch --cached Srcs/Tools/Mysql2Proto/Mysql2Proto/libmysql.lib' -- 50687d0^..
+
+# push all to the remote repository forcefully (some sites don't let you force it if you don't unprotect them before in their website's branch settings)
+$ git push --force
+
+# clean the local refs as well (if it takes too much when using git gc, git clone the repo again)
+$ rm -Rf .git/refs/original
+$ rm -Rf .git/logs/
+$ git gc
+$ git prune --expire now
+
+# to see the current repository's size
+$ git count-objects -v
+```
+
+_Note: [Source discussion](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery#_removing_objects)_
 
 ---
 ##### Other Git Tips
