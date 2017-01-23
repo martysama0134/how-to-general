@@ -511,6 +511,11 @@ $ git prune --expire now
 $ git count-objects -v
 ```
 
+In case of deleting a folder instead of a file, it's all the same except the `git rm -r` option in the `git filter-branch` command, just like this:
+```sh
+$ git filter-branch --index-filter 'git rm -r --ignore-unmatch --cached Srcs/Tools/Mysql2Proto/' -- 50687d0^..
+```
+
 _Note: [Source discussion](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery#_removing_objects)_
 
 ---
