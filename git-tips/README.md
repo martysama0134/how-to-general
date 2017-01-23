@@ -9,6 +9,7 @@
     * [How to setup a credential-helper for git](#how-to-setup-a-credential-helper-for-git)
     * [How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-1---disable-the-default-eol-conversion)
     * [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
+    * [How to refresh after changing gitignore and gitattributes](#how-to-refresh-after-changing-gitignore-and-gitattributes)
     * [How to commit stuff](#how-to-commit-stuff)
     * [How to rename a branch](#how-to-rename-a-branch)
     * [How to delete a branch](#how-to-delete-a-branch)
@@ -17,7 +18,6 @@
     * [How to archive a git repository](#how-to-archive-a-git-repository)
     * [How to merge several git repositories](#how-to-merge-several-git-repositories)
     * [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
-    * [How to refresh after changing gitignore and gitattributes](#how-to-refresh-after-changing-gitignore-and-gitattributes)
     * [How to get the count of the commits made](#how-to-get-the-count-of-the-commits-made)
     * [Other Git Tips](#other-git-tips)
 
@@ -151,6 +151,24 @@ As summary, the meaning of these keywords:
 * `binary` is a short-cut for `-text -diff`
 
 _...to be completed..._
+
+---
+##### How to refresh after changing gitignore and gitattributes
+Be sure you have committed everything before doing this.
+
+You have to clear the repository Index and re-add all the files again.
+
+Doing this, all the files will be processed again with the new rules of `.gitignore` and `.gitattributes`:
+```sh
+# clear the index
+git rm -r --cached .
+
+# re-add all the files
+git add .
+
+# commit the changes
+git commit -m "+gitignore and gitattributes fix"
+```
 
 ---
 ##### How to commit stuff
@@ -437,24 +455,6 @@ git showtrackedignored
 ```
 
 _Note: [Source discussion](http://stackoverflow.com/questions/9320218/#9370094)_
-
----
-##### How to refresh after changing gitignore and gitattributes
-Be sure you have committed everything before doing this.
-
-You have to clear the repository Index and re-add all the files again.
-
-Doing this, all the files will be processed again with the new rules of `.gitignore` and `.gitattributes`:
-```sh
-# clear the index
-git rm -r --cached .
-
-# re-add all the files
-git add .
-
-# commit the changes
-git commit -m "+gitignore and gitattributes fix"
-```
 
 ---
 ##### How to get the count of the commits made
