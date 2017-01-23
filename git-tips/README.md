@@ -434,7 +434,7 @@ _Note: Another way is via [`git fast-export`](https://git-scm.com/docs/git-fast-
 ##### How to merge several git repositories
 You have to upgrade git to the 2.x version and then follow these commands:
 ```sh
-git remote add project-a path/to/project-a
+git remote add project-a <path/to/project-a>
 git fetch project-a
 git merge --allow-unrelated-histories project-a/master
 git remote remove project-a
