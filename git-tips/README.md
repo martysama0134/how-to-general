@@ -4,13 +4,13 @@
 * [Intro](#intro)
 * [Git-files Download](#git-files-download)
 * [Git Tips](#git-tips)
+    * [How to commit stuff](#how-to-commit-stuff)
     * [How to add author info](#how-to-add-author-info)
     * [How to skip SSL certificate validation check](#how-to-skip-ssl-certificate-validation-check)
     * [How to setup a credential-helper for git](#how-to-setup-a-credential-helper-for-git)
     * [How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-1---disable-the-default-eol-conversion)
     * [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
     * [How to refresh after changing gitignore and gitattributes](#how-to-refresh-after-changing-gitignore-and-gitattributes)
-    * [How to commit stuff](#how-to-commit-stuff)
     * [How to rename a branch](#how-to-rename-a-branch)
     * [How to delete a branch](#how-to-delete-a-branch)
     * [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
@@ -41,6 +41,72 @@ This repository will contain all the fundamental tips for git.
 
 ---
 ## Git Tips
+
+---
+##### How to commit stuff
+
+Check which files are staged or untracked with `git status`:
+
+```sh
+$ git status
+On branch master
+Changes not staged for commit:
+      modified:   TODO.txt
+Untracked files:
+      NEWSTUFF.txt
+```
+
+We can say that `TODO.txt` has been modified, and `NEWSTUFF.txt` is a new file yet to be added to the repository's index.
+
+We have two ways to commit the modified `TODO.txt`:
+
+1. We can add it, and then commit it:
+   ```sh
+   $ git add TODO.txt
+   $ git commit -m "your message"
+   ```
+
+2. We can simply commit it with the `-a` option, which commits all the **unstaged modified** changes without previously using `git add <file>`:
+   ```sh
+   $ git commit -am "your message"
+   ```
+
+In either cases, `NEWSTUFF.txt` won't be added because it's an **untracked** file.
+
+Below, the same example written above that includes `NEWSTUFF.txt` too:
+
+1. We can add both, and then commit them:
+   ```sh
+   $ git add TODO.txt NEWSTUFF.txt
+   $ git commit -m "your message"
+   ```
+
+2. We can simply commit the unstaged modified files with the `-a` option, and add the untracked one separately before the commit:
+   ```sh
+   $ git add NEWSTUFF.txt
+   $ git commit -am "your message"
+   ```
+
+Beside `git add` we also have other instructions. Here a list:
+
+```sh
+# how to add files/folders
+$ git add <filename1> <filename2> <filename3>
+
+# how to delete files/folders
+$ git rm <filename1> <filename2> <filename3>
+
+# how to move files/folders
+$ git mv <old_path_name> <new_path_name>
+
+# how to discard changes of unstaged modified files/folders
+$ git checkout -- <filename1> <filename2>
+
+# how to discard changes of staged modified files/folders
+$ git reset HEAD <filename1> <filename2>
+$ git checkout -- <filename1> <filename2>
+
+```
 
 ---
 ##### How to add author info
@@ -168,72 +234,6 @@ git add .
 
 # commit the changes
 git commit -m "+gitignore and gitattributes fix"
-```
-
----
-##### How to commit stuff
-
-Check which files are staged or untracked with `git status`:
-
-```sh
-$ git status
-On branch master
-Changes not staged for commit:
-      modified:   TODO.txt
-Untracked files:
-      NEWSTUFF.txt
-```
-
-We can say that `TODO.txt` has been modified, and `NEWSTUFF.txt` is a new file yet to be added to the repository's index.
-
-We have two ways to commit the modified `TODO.txt`:
-
-1. We can add it, and then commit it:
-   ```sh
-   $ git add TODO.txt
-   $ git commit -m "your message"
-   ```
-
-2. We can simply commit it with the `-a` option, which commits all the **unstaged modified** changes without previously using `git add <file>`:
-   ```sh
-   $ git commit -am "your message"
-   ```
-
-In either cases, `NEWSTUFF.txt` won't be added because it's an **untracked** file.
-
-Below, the same example written above that includes `NEWSTUFF.txt` too:
-
-1. We can add both, and then commit them:
-   ```sh
-   $ git add TODO.txt NEWSTUFF.txt
-   $ git commit -m "your message"
-   ```
-
-2. We can simply commit the unstaged modified files with the `-a` option, and add the untracked one separately before the commit:
-   ```sh
-   $ git add NEWSTUFF.txt
-   $ git commit -am "your message"
-   ```
-
-Beside `git add` we also have other instructions. Here a list:
-
-```sh
-# how to add files/folders
-$ git add <filename1> <filename2> <filename3>
-
-# how to delete files/folders
-$ git rm <filename1> <filename2> <filename3>
-
-# how to move files/folders
-$ git mv <old_path_name> <new_path_name>
-
-# how to discard changes of unstaged modified files/folders
-$ git checkout -- <filename1> <filename2>
-
-# how to discard changes of staged modified files/folders
-$ git reset HEAD <filename1> <filename2>
-$ git checkout -- <filename1> <filename2>
-
 ```
 
 ---
