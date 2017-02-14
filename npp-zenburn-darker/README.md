@@ -1,4 +1,4 @@
-1. Copy the [Zenburn_MOD.xml](./Zenburn_MOD.xml) file inside `%appdata%\Notepad++\themes\` and restart notepad++.
+1. Copy the [Zenburn_MOD.xml](https://github.com/martysama0134/how-to-general/raw/master/npp-zenburn-darker/Zenburn_MOD.xml) file inside `%appdata%\Notepad++\themes\` and restart notepad++.
 2. Be also sure to switch theme: _Settings -> Style Configurator... -> Select theme: Zenburn_MOD -> Save & Close_
 
 _Note: color list:_
