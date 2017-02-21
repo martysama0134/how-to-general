@@ -4,23 +4,23 @@
 * [Intro](#intro)
 * [Git-files Download](#git-files-download)
 * [Git Tips](#git-tips)
-    * [How to commit stuff](#how-to-commit-stuff)
-    * [How to add author info](#how-to-add-author-info)
-    * [How to skip SSL certificate validation check](#how-to-skip-ssl-certificate-validation-check)
-    * [How to setup a credential-helper for git](#how-to-setup-a-credential-helper-for-git)
-    * [How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-1---disable-the-default-eol-conversion)
-    * [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
-    * [How to refresh after changing gitignore and gitattributes](#how-to-refresh-after-changing-gitignore-and-gitattributes)
-    * [How to rename a branch](#how-to-rename-a-branch)
-    * [How to delete a branch](#how-to-delete-a-branch)
-    * [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
-    * [How to create a diff between branches or commits (2nd way - auto commit)](#how-to-create-a-diff-between-branches-or-commits-2nd-way---auto-commit)
-    * [How to archive a git repository](#how-to-archive-a-git-repository)
-    * [How to merge several git repositories](#how-to-merge-several-git-repositories)
-    * [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
-    * [How to get the count of the commits made](#how-to-get-the-count-of-the-commits-made)
-    * [How to delete a file from the whole history](#how-to-delete-a-file-from-the-whole-history)
-    * [Other Git Tips](#other-git-tips)
+	* [How to commit stuff](#how-to-commit-stuff)
+	* [How to add author info](#how-to-add-author-info)
+	* [How to skip SSL certificate validation check](#how-to-skip-ssl-certificate-validation-check)
+	* [How to setup a credential-helper for git](#how-to-setup-a-credential-helper-for-git)
+	* [How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-1---disable-the-default-eol-conversion)
+	* [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
+	* [How to refresh after changing gitignore and gitattributes](#how-to-refresh-after-changing-gitignore-and-gitattributes)
+	* [How to rename a branch](#how-to-rename-a-branch)
+	* [How to delete a branch](#how-to-delete-a-branch)
+	* [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
+	* [How to create a diff between branches or commits (2nd way - auto commit)](#how-to-create-a-diff-between-branches-or-commits-2nd-way---auto-commit)
+	* [How to archive a git repository](#how-to-archive-a-git-repository)
+	* [How to merge several git repositories](#how-to-merge-several-git-repositories)
+	* [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
+	* [How to get the count of the commits made](#how-to-get-the-count-of-the-commits-made)
+	* [How to delete a file from the whole history](#how-to-delete-a-file-from-the-whole-history)
+	* [Other Git Tips](#other-git-tips)
 
 ---
 ## Intro
@@ -29,16 +29,16 @@ This repository will contain all the fundamental tips for git.
 ---
 ## Git-files Download
 * Git Clients (GUI)
-    * [GitEye](http://www.collab.net/downloads/giteye)
-    * [TortoiseGit](https://tortoisegit.org/download/)
-    * [GitHub Desktop](https://desktop.github.com/)
-    * [Others](http://git-scm.com/downloads/guis)
+	* [GitEye](http://www.collab.net/downloads/giteye)
+	* [TortoiseGit](https://tortoisegit.org/download/)
+	* [GitHub Desktop](https://desktop.github.com/)
+	* [Others](http://git-scm.com/downloads/guis)
 * Git Clients (Command-Line)
-    * [msysgit](http://git-scm.com/downloads)
+	* [msysgit](http://git-scm.com/downloads)
 * Git Books
-    * [Git Reference](http://git-scm.com/docs)
-    * [Pro Git v2](http://git-scm.com/book/en/v2)
-    * [Others](http://git-scm.com/doc/ext)
+	* [Git Reference](http://git-scm.com/docs)
+	* [Pro Git v2](http://git-scm.com/book/en/v2)
+	* [Others](http://git-scm.com/doc/ext)
 
 ---
 ## Git Tips
@@ -52,9 +52,9 @@ Check which files are staged or untracked with `git status`:
 $ git status
 On branch master
 Changes not staged for commit:
-      modified:   TODO.txt
+		modified:   TODO.txt
 Untracked files:
-      NEWSTUFF.txt
+		NEWSTUFF.txt
 ```
 
 We can say that `TODO.txt` has been modified, and `NEWSTUFF.txt` is a new file yet to be added to the repository's index.
@@ -62,31 +62,35 @@ We can say that `TODO.txt` has been modified, and `NEWSTUFF.txt` is a new file y
 We have two ways to commit the modified `TODO.txt`:
 
 1. We can add it, and then commit it:
-   ```sh
-   $ git add TODO.txt
-   $ git commit -m "your message"
-   ```
+
+	```sh
+	$ git add TODO.txt
+	$ git commit -m "your message"
+	```
 
 2. We can simply commit it with the `-a` option, which commits all the **unstaged modified** changes without previously using `git add <file>`:
-   ```sh
-   $ git commit -am "your message"
-   ```
+
+	```sh
+	$ git commit -am "your message"
+	```
 
 In either cases, `NEWSTUFF.txt` won't be added because it's an **untracked** file.
 
 Below, the same example written above that includes `NEWSTUFF.txt` too:
 
 1. We can add both, and then commit them:
-   ```sh
-   $ git add TODO.txt NEWSTUFF.txt
-   $ git commit -m "your message"
-   ```
+
+	```sh
+	$ git add TODO.txt NEWSTUFF.txt
+	$ git commit -m "your message"
+	```
 
 2. We can simply commit the unstaged modified files with the `-a` option, and add the untracked one separately before the commit:
-   ```sh
-   $ git add NEWSTUFF.txt
-   $ git commit -am "your message"
-   ```
+
+	```sh
+	$ git add NEWSTUFF.txt
+	$ git commit -am "your message"
+	```
 
 Beside `git add` we also have other instructions. Here a list:
 
@@ -128,35 +132,40 @@ $ git config --global http.sslverify false
 ##### How to setup a credential-helper for git
 
 * Temporary (stored in ram/cache)
-    * On BSD/Linux
+	* On BSD/Linux
 
-        * By default (timeout specified for 15 minutes)
-          ```sh
-          $ git config --global credential.helper cache
-          ```
+		* By default (timeout specified for 15 minutes)
 
-        * Custom (timeout specified for an hour)
-          ```sh
-          $ git config --global credential.helper "cache --timeout=3600"
-          ```
+			```sh
+			$ git config --global credential.helper cache
+			```
 
-    * On OSX
-      ```sh
-      $ git config --global credential.helper osxkeychain
-      ```
+		* Custom (timeout specified for an hour)
 
-    * On Windows
-      ```sh
-      $ git config --global credential.helper wincred
-      ```
+			```sh
+			$ git config --global credential.helper "cache --timeout=3600"
+			```
+
+	* On OSX
+
+		```sh
+		$ git config --global credential.helper osxkeychain
+		```
+
+	* On Windows
+
+		```sh
+		$ git config --global credential.helper wincred
+		```
 
 * Permanent (stored in file)
-    * On BSD/Linux/OSX/Windows
-      ```sh
-      $ git config --global credential.helper store
-      ```
+	* On BSD/Linux/OSX/Windows
 
-      _Note: It's saved as plain text. Its path is usually `%userprofile%\.git-credentials` on Windows, and `~/.git-credentials` on BSD/Linux._
+		```sh
+		$ git config --global credential.helper store
+		```
+
+		_Note: It's saved as plain text. Its path is usually `%userprofile%\.git-credentials` on Windows, and `~/.git-credentials` on BSD/Linux._
 
 * [Other ways](http://stackoverflow.com/questions/5343068)
 
@@ -226,6 +235,7 @@ Be sure you have committed everything before doing this.
 You have to clear the repository Index and re-add all the files again.
 
 Doing this, all the files will be processed again with the new rules of `.gitignore` and `.gitattributes`:
+
 ```sh
 # clear the index
 git rm -r --cached .
@@ -241,16 +251,19 @@ git commit -m "+gitignore and gitattributes fix"
 ##### How to rename a branch
 
 * To rename the current local branch:
-  ```sh
-  $ git branch -m <new_branch_name>
-  ```
+
+	```sh
+	$ git branch -m <new_branch_name>
+	```
 
 * To rename a specified local branch:
-  ```sh
-  $ git branch -m <old_branch_name> <new_branch_name>
-  ```
+
+	```sh
+	$ git branch -m <old_branch_name> <new_branch_name>
+	```
 
 After renamed the local branch, we have to "rename" the remote one too:
+
 ```sh
 # pushing the local renamed branch to the remote repository
 $ git push origin <new_branch_name>:refs/heads/<new_branch_name>
@@ -269,64 +282,74 @@ $ git fetch origin --prune
 ##### How to delete a branch
 
 * To delete a local branch:
-  ```sh
-  $ git branch -D <branch_name>
-  ```
+
+	```sh
+	$ git branch -D <branch_name>
+	```
 
 * To delete a remote branch:
-  ```sh
-  $ git push origin :<branch_name>
-  ```
+
+	```sh
+	$ git push origin :<branch_name>
+	```
 
 ---
 ##### How to create a diff between branches or commits
 
 * To generate a textual diff between commits:
-  ```sh
-  $ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
-  ```
+
+	```sh
+	$ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
+	```
 
 * To generate a textual diff between commits:
-  ```sh
-  $ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
-  ```
+
+	```sh
+	$ git diff b0a7f70..8c2aef3 > b0a7f70_vs_8c2aef3.diff
+	```
 
 * To generate a textual diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
-  ```sh
-  $ git diff master...retsam --ignore-space-at-eol > master_vs_retsam.diff
-  ```
+
+	```sh
+	$ git diff master...retsam --ignore-space-at-eol > master_vs_retsam.diff
+	```
 
 * To apply the generated textual diff somewhere:
-  ```sh
-  # system built-in diff patcher
-  $ patch -p1 < master_vs_retsam.diff
 
-  # otherwise, git built-in diff patcher
-  $ git apply -p1 < master_vs_retsam.diff
-  ```
+	```sh
+	# system built-in diff patcher
+	$ patch -p1 < master_vs_retsam.diff
+
+	# otherwise, git built-in diff patcher
+	$ git apply -p1 < master_vs_retsam.diff
+	```
 
 * To generate a diff including binary data between `master` and `master~2` (two commits behind master):
-  ```sh
-  $ git diff master~2..master --binary < masterb2_vs_master.diff
-  ```
+
+	```sh
+	$ git diff master~2..master --binary < masterb2_vs_master.diff
+	```
 
 * To apply the generated diff (binary data included) somewhere:
-  ```sh
-  $ git apply -p1 < masterb2_vs_master.diff
-  ```
+
+	```sh
+	$ git apply -p1 < masterb2_vs_master.diff
+	```
 
 ---
 ##### How to create a diff between branches or commits (2nd way - auto commit)
 
 * To generate a diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
-  ```sh
-  $ git format-patch master...retsam --ignore-space-at-eol -k --stdout > master_vs_retsam.patch
-  ```
+
+	```sh
+	$ git format-patch master...retsam --ignore-space-at-eol -k --stdout > master_vs_retsam.patch
+	```
 
 * To apply the generated diff somewhere:
-  ```sh
-  $ git am -3 -k < master_vs_retsam.patch
-  ```
+
+	```sh
+	$ git am -3 -k < master_vs_retsam.patch
+	```
 
 ---
 ##### How to archive a git repository
@@ -335,105 +358,111 @@ You can decide to archive either an entire repository (whether or not including 
 
 * Including the history
 
-  Usually, this is made using the [`git bundle`](https://git-scm.com/blog/2010/03/10/bundles.html) feature. People could also zip the whole repository (including the `.git` folder), but that's another story.
+	Usually, this is made using the [`git bundle`](https://git-scm.com/blog/2010/03/10/bundles.html) feature. People could also zip the whole repository (including the `.git` folder), but that's another story.
 
-  We should now decide if we must create a _bundle_ of the whole repository or of just a branch.
+	We should now decide if we must create a _bundle_ of the whole repository or of just a branch.
 
-    * Bundle of the whole repo
+	* Bundle of the whole repo
 
-      To make a bundle of the whole repo, we have to do:
-      ```sh
-      $ git bundle create <repository_name>.bundle --all
-      ```
+		To make a bundle of the whole repo, we have to do:
 
-      To import a complete bundle, we have two solutions:
+		```sh
+		$ git bundle create <repository_name>.bundle --all
+		```
 
-        1. Clone the bundle to a new repository
-           ```sh
-           $ git clone <repository_name>.bundle <repository_name>
-           ```
+		To import a complete bundle, we have two solutions:
 
-           In this case, there will be no local branches created so far beside HEAD, but only remote ones. You can print them by doing `git branch -r`.
+		1. Clone the bundle to a new repository
 
-           You have to checkout the branch you want to get a local copy of it: (e.g. getting master)
+			```sh
+			$ git clone <repository_name>.bundle <repository_name>
+			```
 
-           ```sh
-           $ cd <repository_name>
-           $ git checkout -b master origin/master
-           ```
+			In this case, there will be no local branches created so far beside HEAD, but only remote ones. You can print them by doing `git branch -r`.
 
-        2. Pull the bundle refs, creating so, for each branch, a local one
-           ```sh
-           # create the folder and enter it
-           $ mkdir <repository_name>
-           $ cd <repository_name>
+			You have to checkout the branch you want to get a local copy of it: (e.g. getting master)
 
-           # create .git
-           $ git init
+			```sh
+			$ cd <repository_name>
+			$ git checkout -b master origin/master
+			```
 
-           # fetch the data form the .bundle
-           $ git pull <repository_name>.bundle *:*
-           ```
+		2. Pull the bundle refs, creating so, for each branch, a local one
 
-           _Note: It will print a warning regarding HEAD, but everything will be fine._
+			```sh
+			# create the folder and enter it
+			$ mkdir <repository_name>
+			$ cd <repository_name>
 
-    * Bundle of a bunch of branches
+			# create .git
+			$ git init
 
-      To make a bundle of a bunch of branches (e.g. master and retsam), we have to do:
-      ```sh
-      $ git bundle create <repository_name>_master.bundle master
-      $ git bundle create <repository_name>_retsam.bundle retsam
-      ```
+			# fetch the data form the .bundle
+			$ git pull <repository_name>.bundle *:*
+			```
 
-      To import those splitted branches, we can do:
-      ```sh
-      # create the folder and enter it
-      $ mkdir <repository_name>
-      $ cd <repository_name>
+			_Note: It will print a warning regarding HEAD, but everything will be fine._
 
-      # create .git
-      $ git init
+	* Bundle of a bunch of branches
 
-      # checkout the specific branch or it will overwrite the current one even though you setup a different local target!
-      # and pull from the bundle the branch we need
-      $ git checkout -b master
-      $ git pull <repository_name>_master.bundle master
+		To make a bundle of a bunch of branches (e.g. master and retsam), we have to do:
 
-      # checkout and fetch the retsam branch!
-      $ git checkout -b retsam
-      $ git pull <repository_name>_retsam.bundle retsam
-      ```
+		```sh
+		$ git bundle create <repository_name>_master.bundle master
+		$ git bundle create <repository_name>_retsam.bundle retsam
+		```
 
-  _Note: In all the cases, you should re-set the upstream url_
+		To import those splitted branches, we can do:
+
+		```sh
+		# create the folder and enter it
+		$ mkdir <repository_name>
+		$ cd <repository_name>
+
+		# create .git
+		$ git init
+
+		# checkout the specific branch or it will overwrite the current one even though you setup a different local target!
+		# and pull from the bundle the branch we need
+		$ git checkout -b master
+		$ git pull <repository_name>_master.bundle master
+
+		# checkout and fetch the retsam branch!
+		$ git checkout -b retsam
+		$ git pull <repository_name>_retsam.bundle retsam
+		```
+
+	_Note: In all the cases, you should re-set the upstream url_
 
 * Not including the history
 
-  In this case, [`git archive`](https://git-scm.com/docs/git-archive) is the most used. [Other Info](http://stackoverflow.com/questions/160608/do-a-git-export-like-svn-export)
+	In this case, [`git archive`](https://git-scm.com/docs/git-archive) is the most used. [Other Info](http://stackoverflow.com/questions/160608/do-a-git-export-like-svn-export)
 
-  The only inconvenience is that it exports just a branch at a time.
+	The only inconvenience is that it exports just a branch at a time.
 
-  ```sh
-  # create a .tar
-  $ git archive <branch_name> --format=tar -o ./<archivename>.tar
+	```sh
+	# create a .tar
+	$ git archive <branch_name> --format=tar -o ./<archivename>.tar
 
-  # create a .tgz
-  $ git archive <branch_name> --format=tgz > ./<archivename>.tgz
+	# create a .tgz
+	$ git archive <branch_name> --format=tgz > ./<archivename>.tgz
 
-  # create a .tgz with the best compression from pipe
-  $ git archive <branch_name> --format=tar | gzip -9 > ./<archivename>.tgz
+	# create a .tgz with the best compression from pipe
+	$ git archive <branch_name> --format=tar | gzip -9 > ./<archivename>.tgz
 
-  # create a .zip with default compression
-  $ git archive <branch_name> --format=zip -o ./<archivename>.zip
+	# create a .zip with default compression
+	$ git archive <branch_name> --format=zip -o ./<archivename>.zip
 
-  # create a .zip with the maximum compression
-  $ git archive <branch_name> --format=zip -9 -o ./<archivename>.zip
-  ```
+	# create a .zip with the maximum compression
+	$ git archive <branch_name> --format=zip -9 -o ./<archivename>.zip
+	```
 
 _Note: Another way is via [`git fast-export`](https://git-scm.com/docs/git-fast-export) | [`git fast-import`](https://git-scm.com/docs/git-fast-import)_
 
 ---
 ##### How to merge several git repositories
 You have to upgrade git to the 2.x version and then follow these commands:
+
 ```sh
 git remote add project-a <path/to/project-a>
 git fetch project-a
@@ -445,14 +474,14 @@ _Note: [Source discussion](http://stackoverflow.com/questions/1425892/#10548919)
 
 ---
 ##### How to show tracked ignored files
-It's a simple command, but :
+
 ```sh
 # simply:
-git ls-files -i --exclude-standard
+$ git ls-files -i --exclude-standard
 
 # making an alias of it and calling it
-git config --global alias.showtrackedignored "ls-files -i --exclude-standard"
-git showtrackedignored
+$ git config --global alias.showtrackedignored "ls-files -i --exclude-standard"
+$ git showtrackedignored
 ```
 
 _Note: [Source discussion](http://stackoverflow.com/questions/9320218/#9370094)_
@@ -460,6 +489,7 @@ _Note: [Source discussion](http://stackoverflow.com/questions/9320218/#9370094)_
 ---
 ##### How to get the count of the commits made
 Simply:
+
 ```sh
 # show the count of all the commits of every branch
 $ git rev-list --count --all
@@ -471,14 +501,15 @@ $ git rev-list --count master
 
 # show the count separated by committers
 $ git shortlog -s
-    11  Administrator
-    32  Charlie Root
-   500  martysama0134
+	11	Administrator
+	32	Charlie Root
+	571	martysama0134
 ```
 
 ---
 ##### How to delete a file from the whole history
 If you have several commits, it will take almost 1 second per commit to remove the relative file and rewrite the history.
+
 ```sh
 # check which files are the most bigger in your git repository
 $ git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -5
@@ -512,6 +543,7 @@ $ git count-objects -v
 ```
 
 In case of deleting a folder instead of a file, it's all the same except the `git rm -r` option in the `git filter-branch` command, just like this:
+
 ```sh
 $ git filter-branch --index-filter 'git rm -r --ignore-unmatch --cached Srcs/Tools/Mysql2Proto/' -- 50687d0^..
 ```
