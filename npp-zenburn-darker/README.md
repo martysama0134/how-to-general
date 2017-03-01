@@ -13,3 +13,7 @@ CC9393 -> DC8383
 C89191 -> DC8383
 DCA3A3 -> DC8383
 ```
+
+Result:
+[![Result Label 1](http://i.imgur.com/ogiJYou.png)](http://i.imgur.com/ogiJYou.png)
+[![Result Label 2](http://i.imgur.com/v2wJTul.png)](http://i.imgur.com/v2wJTul.png)
