@@ -405,31 +405,25 @@ You can decide to archive either an entire repository (whether or not including 
 
 	* Bundle of a bunch of branches
 
-		To make a bundle of a bunch of branches (e.g. master and retsam), we have to do:
+		To make a bundle of a specific branch:
 
 		```sh
-		$ git bundle create <repository_name>_master.bundle master
-		$ git bundle create <repository_name>_retsam.bundle retsam
+		$ git bundle create <filename>.bundle master
 		```
 
-		To import those splitted branches, we can do:
+		To clone the specific branch:
 
 		```sh
-		# create the folder and enter it
-		$ mkdir <repository_name>
-		$ cd <repository_name>
+		$ git clone <filename>.bundle --branch master
+		```
 
-		# create .git
-		$ git init
+		To import the specific branch:
 
+		```sh
 		# checkout the specific branch or it will overwrite the current one even though you setup a different local target!
 		# and pull from the bundle the branch we need
 		$ git checkout -b master
-		$ git pull <repository_name>_master.bundle master
-
-		# checkout and fetch the retsam branch!
-		$ git checkout -b retsam
-		$ git pull <repository_name>_retsam.bundle retsam
+		$ git pull <filename>.bundle master
 		```
 
 	_Note: In all the cases, you should re-set the upstream url_
