@@ -180,7 +180,7 @@ If you want to run Tor without starting Firefox:
 1. Switch folder `cd .\Tor Browser\Browser\TorBrowser\Tor`
 1. Run it as `tor.exe -f ..\Data\Tor\torrc-defaults`
 
-Or make a `RunTorOnly.bat` using a full path like this:
+Or make a [RunTorOnly.bat](./RunTorOnly.bat) using a full path like this: (adjust the path as you prefer)
 
 ```sh
 TITLE Tor
