@@ -187,7 +187,7 @@ TITLE Tor
 ".\Tor Browser\Browser\TorBrowser\Tor\tor.exe" -f ".\Tor Browser\Browser\TorBrowser\Data\Tor\torrc-defaults"
 ```
 
-_Note: if tor.exe was still running, the .bat will close after some moments. You can safely close the console and tor.exe will keep staying running anyway._
+_Note: if tor.exe was still running, the .bat will close after some moments. You can safely close the console and tor.exe will keep running fine._
 
 ---
 ## 2.2 How to find public proxy servers
