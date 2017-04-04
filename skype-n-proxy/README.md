@@ -91,6 +91,8 @@ As you could imagine, Skype has tons of issues.
 
 Even the proxy settings bar has many horror stories behind.
 
+Note: The proxy settings have been fucked up in the new skype versions, so downgrade to 7.15.0.102 if you want to keep using this method.
+
 ---
 If you dare to use the **Options->Advanced->Connection** option for it, you'll be reconnected through your real IP if skype can't connect to the proxy.
 
@@ -172,6 +174,20 @@ Windows Registry Editor Version 5.00
 "ProxyUsername"=-
 "ProxyPassword"=-
 ```
+
+If you want to run Tor without starting Firefox:
+
+1. Switch folder `cd .\Tor Browser\Browser\TorBrowser\Tor`
+1. Run it as `tor.exe -f ..\Data\Tor\torrc-defaults`
+
+Or make a `RunTorOnly.bat` using a full path like this:
+
+```sh
+TITLE Tor
+".\Tor Browser\Browser\TorBrowser\Tor\tor.exe" -f ".\Tor Browser\Browser\TorBrowser\Data\Tor\torrc-defaults"
+```
+
+_Note: if tor.exe was still running, the .bat will close after some moments. You can safely close the console and tor.exe will keep staying running anyway._
 
 ---
 ## 2.2 How to find public proxy servers
