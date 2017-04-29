@@ -7,6 +7,7 @@
 	* [How to commit stuff](#how-to-commit-stuff)
 	* [How to add author info](#how-to-add-author-info)
 	* [How to skip SSL certificate validation check](#how-to-skip-ssl-certificate-validation-check)
+	* [How to enable the colors in shell](#how-to-enable-the-colors-in-shell)
 	* [How to setup a credential-helper for git](#how-to-setup-a-credential-helper-for-git)
 	* [How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-1---disable-the-default-eol-conversion)
 	* [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
@@ -126,6 +127,21 @@ $ git config --global user.name martysama0134
 
 ```sh
 $ git config --global http.sslverify false
+```
+
+---
+##### How to enable the colors in shell
+
+To enable the colors if they are not present:
+
+```sh
+$ git config --global color.ui true
+```
+
+On BSD, the colors are not displayed and you see ESC[r] instead. You solve it with:
+
+```sh
+$ git config --global core.pager 'less -R'
 ```
 
 ---
