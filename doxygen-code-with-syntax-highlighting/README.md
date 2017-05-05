@@ -60,4 +60,8 @@ Result:
 Notes:
 
 1. The inline comments in lua are a little buggy, so I had to use the in-section comments `--[[...]]` instead.
+1. The CDN-hosted of highlightjs packages are here:
+
+	1. [highlight.min.js](//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js)
+	1. [lua.min.js](//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/lua.min.js)
 
