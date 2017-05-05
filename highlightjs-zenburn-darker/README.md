@@ -18,17 +18,6 @@ added  -> 00ff00 #diff
 delete -> ff0000 #diff
 ```
 
-Result:
-
-[![Result Label 1](http://i.imgur.com/ogiJYou.png)](http://i.imgur.com/ogiJYou.png)
-
-[![Result Label 2](http://i.imgur.com/v2wJTul.png)](http://i.imgur.com/v2wJTul.png)
-
-
-And for diff patch files:
-
-[![Result Label 3](http://i.imgur.com/JWAx4Wu.png)](http://i.imgur.com/JWAx4Wu.png)
-
 HighlightJS inside Doxygen VS Notepad++ modded version:
 
 [![Result Label 3](http://i.imgur.com/Nm3nZSZ.png)](http://i.imgur.com/Nm3nZSZ.png)
