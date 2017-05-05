@@ -6,8 +6,13 @@ Doxygen:
 
 ```
 HTML_HEADER            = style/header.html
-HTML_EXTRA_STYLESHEET  = style/doxygen_light.css style/github.css
-HTML_EXTRA_FILES       += style/doxygen_night.css style/zenburn_mod.css
+#highlightjs
+HTML_EXTRA_FILES       = style/highlight.min.js style/lua.min.js
+HTML_EXTRA_STYLESHEET  += style/github.css
+HTML_EXTRA_FILES       += style/zenburn_mod.css
+#daynight
+HTML_EXTRA_STYLESHEET  += style/doxygen_light.css
+HTML_EXTRA_FILES       += style/doxygen_night.css
 ```
 
 header.html before `</head>`:
