@@ -1,0 +1,90 @@
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #1f1f1f;
+  color: #dcdccc;
+}
+
+.hljs-literal,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-tag {
+  color: #feb183;
+  font-weight: bold;
+}
+
+.hljs-template-tag {
+  color: #dcdccc;
+}
+
+.hljs-number {
+  color: #7ee0de;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute {
+  color: #feb183;
+}
+
+.hljs-subst {
+  color: #8f8f8f;
+}
+
+.hljs-title,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-section,
+.hljs-type {
+  color: #dcdccc;
+  font-weight: bold;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+  color: #dc8383;
+}
+
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #e4e792;
+  font-weight: bold;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-meta {
+  color: #7f9f7f;
+  font-style: italic;
+}
+
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-addition {
+  color: #00ff00;
+}
+.hljs-deletion {
+  color: #ff0000;
+}
+
+.hljs-string {
+  color: #dc8383;
+}
