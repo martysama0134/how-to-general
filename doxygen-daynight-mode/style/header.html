@@ -1,0 +1,122 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen $doxygenversion"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--BEGIN PROJECT_NAME--><title>$projectname: $title</title><!--END PROJECT_NAME-->
+<!--BEGIN !PROJECT_NAME--><title>$title</title><!--END !PROJECT_NAME-->
+<link href="$relpath^tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="$relpath^jquery.js"></script>
+<script type="text/javascript" src="$relpath^dynsections.js"></script>
+$treeview
+$search
+$mathjax
+<link href="$relpath^$stylesheet" rel="stylesheet" type="text/css" />
+$extrastylesheet
+<!--HIGHLIGHT.JS INSTALL BEGIN-->
+<script src="$relpath^highlight.min.js"></script>
+<script src="$relpath^lua.min.js"></script>
+<script>
+$(function() {
+	hljs.configure({useBR: false});
+	$(".fragment").each(function(i,node) {
+		$(node).removeClass("fragment");
+		hljs.highlightBlock(node);
+	});
+});
+</script>
+<!--HIGHLIGHT.JS INSTALL END-->
+<!--DAY/NIGHT INSTALL BEGIN-->
+<script>
+function daynight_check() {
+	if (typeof(Storage) !== "undefined") {
+		if (localStorage.getItem("bgColor")=="night") {
+			night();
+		}
+		/*else if (localStorage.getItem("bgColor")=="day") {
+			day();
+		}*/
+	}
+};
+function changeCSS(cssFile, cssLinkIndex) {
+
+	var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+	var newlink = document.createElement("link");
+	newlink.setAttribute("rel", "stylesheet");
+	newlink.setAttribute("type", "text/css");
+	newlink.setAttribute("href", cssFile);
+
+	document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+}
+function changeCSS2(cssOLdFile, cssNewFile) {
+	var oldlink = document.getElementsByTagName("link");
+	for (i = 0; i < oldlink.length; i++) {
+		if (oldlink.item(i).getAttribute("href")==cssOLdFile) {
+			changeCSS(cssNewFile, i)
+		}
+	}
+}
+function day() {
+	changeCSS2("doxygen_night.css", "doxygen_light.css");
+	changeCSS2("zenburn_mod.css", "github.css");
+	if (typeof(Storage) !== "undefined") {
+		localStorage.setItem("bgColor", "day");
+	}
+};
+function night() {
+	changeCSS2("doxygen_light.css", "doxygen_night.css");
+	changeCSS2("github.css", "zenburn_mod.css");
+	if (typeof(Storage) !== "undefined") {
+		localStorage.setItem("bgColor", "night");
+	}
+};
+document.addEventListener('DOMContentLoaded', function() {
+	daynight_check();
+}, false);
+</script>
+<!--DAY/NIGHT INSTALL END-->
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!--BEGIN TITLEAREA-->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <!--BEGIN PROJECT_LOGO-->
+  <td id="projectlogo"><img alt="Logo" src="$relpath^$projectlogo"/></td>
+  <!--END PROJECT_LOGO-->
+  <!--BEGIN PROJECT_NAME-->
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">$projectname
+   <!--BEGIN PROJECT_NUMBER-->&#160;<span id="projectnumber">$projectnumber</span><!--END PROJECT_NUMBER-->
+<!--DAY/NIGHT INSTALL BEGIN-->
+	<input type="button" class="daynightbtn" onclick="day();" value="Day" />
+	<input type="button" class="daynightbtn" onclick="night();" value="Night" />
+<!--DAY/NIGHT INSTALL END-->
+   </div>
+   <!--BEGIN PROJECT_BRIEF--><div id="projectbrief">$projectbrief</div><!--END PROJECT_BRIEF-->
+  </td>
+  <!--END PROJECT_NAME-->
+  <!--BEGIN !PROJECT_NAME-->
+   <!--BEGIN PROJECT_BRIEF-->
+    <td style="padding-left: 0.5em;">
+    <div id="projectbrief">$projectbrief</div>
+    </td>
+   <!--END PROJECT_BRIEF-->
+  <!--END !PROJECT_NAME-->
+  <!--BEGIN DISABLE_INDEX-->
+   <!--BEGIN SEARCHENGINE-->
+   <td>$searchbox</td>
+   <!--END SEARCHENGINE-->
+  <!--END DISABLE_INDEX-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!--END TITLEAREA-->
+<!-- end header part -->
