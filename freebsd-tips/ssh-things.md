@@ -11,16 +11,17 @@ By default, when installing the OS, root can't login via ssh, so we need to enab
 
 1. Open the ssh config file:
 
-```sh
-$ ee /etc/ssh/sshd_config
+	```sh
+	$ ee /etc/ssh/sshd_config
+	```
 
-1. Edit/Add the following option as such:
+2. Edit/Add the following option as such:
 
-```sh
-PermitRootLogin yes
-```
+	```sh
+	PermitRootLogin yes
+	```
 
-_Note: by default, it's `no`. There's also another option `without-password` for enabling just login via rsa key and disabling via password._
+	_Note: by default, it's `no`. There's also another option `without-password` for enabling just login via rsa key and disabling via password._
 
 
 --------------------------------------------------------------------------------
@@ -29,21 +30,23 @@ By default, the sftp port is 22, but it's easily swichable.
 
 1. Open the ssh config file:
 
-```sh
-$ ee /etc/ssh/sshd_config
+	```sh
+	$ ee /etc/ssh/sshd_config
+	```
 
-1. Edit/Add the following option as such specifying a different port number: (it's advised to use a number above 1024 since the first 1024 are reserved)
+2. Edit/Add the following option as such specifying a different port number: (it's advised to use a number above 1024 since the first 1024 are reserved)
 
-```sh
-Port 22
-```
+	```sh
+	Port 22
+	```
+
 3. Refresh the settings:
 
-```sh
-$ service sshd reload
-```
+	```sh
+	$ service sshd reload
+	```
 
-_Note: by doing `reload` instead of `restart`, the already connected ssh connections will stay connected and working_
+	_Note: by doing `reload` instead of `restart`, the already connected ssh connections will stay connected and working_
 
 
 --------------------------------------------------------------------------------
