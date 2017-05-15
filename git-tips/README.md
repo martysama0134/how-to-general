@@ -119,8 +119,8 @@ $ git checkout -- <filename1> <filename2>
 ##### How to add author info
 
 ```sh
-$ git config --global user.email martysama0134@example.com
-$ git config --global user.name martysama0134
+$ git config --global user.email you@example.com
+$ git config --global user.name "Your Name"
 ```
 
 ---
