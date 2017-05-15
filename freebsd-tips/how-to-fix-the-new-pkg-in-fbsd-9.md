@@ -1,5 +1,5 @@
 # How to fix the new pkg in Freebsd 9
-In fbsd 9, there are two kind of package management, pkg and pkg-tools.
+In fbsd 9, there are two kind of package management tools, pkg and pkg-tools.
 
 `pkg` is the new one, and has been installed without any configuration, which is why it doesn't work most of the times.
 
@@ -53,3 +53,15 @@ To fix it, we need to configure it manually:
 	$ pkg update -f
 	```
 
+---
+
+## Note:
+
+1. `pkg.freebsd.org.2013102301` is a simple textual file containing: (with a newline in the end)
+
+	```
+	# $FreeBSD$
+
+	function: "sha256"
+	fingerprint: "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+	```
