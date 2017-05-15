@@ -21,6 +21,7 @@
 	* [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
 	* [How to get the count of the commits made](#how-to-get-the-count-of-the-commits-made)
 	* [How to delete a file from the whole history](#how-to-delete-a-file-from-the-whole-history)
+	* [How to show and delete all the gitignored files](#how-to-show-and-delete-all-the-gitignored-files)
 	* [Other Git Tips](#other-git-tips)
 
 ---
@@ -559,6 +560,20 @@ $ git filter-branch --index-filter 'git rm -r --ignore-unmatch --cached Srcs/Too
 ```
 
 _Note: [Source discussion](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery#_removing_objects)_
+
+---
+##### How to show and delete all the gitignored files
+To show all the gitignored files (and directories with -d specified):
+
+```sh
+$ git clean -xnd
+```
+
+To delete all of them:
+
+```sh
+$ git clean -xdf
+```
 
 ---
 ##### Other Git Tips
