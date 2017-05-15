@@ -105,7 +105,7 @@ By default, the (sftp) ssh port is 22, but it's easily swichable.
 
 	4. Now you have two files inside `/root/.ssh`: `id_rsa` and `id_rsa.pub`. Save both of them in your computer.
 
-		You can ignored the printed key fingerprint and key's randomart image.
+		_Note: you can ignored the printed key fingerprint and key's randomart image._
 
 	5. Add the public key in the authorized keys:
 
@@ -122,6 +122,7 @@ By default, the (sftp) ssh port is 22, but it's easily swichable.
 		```
 
 	_Note: you don't need to refresh anything to enable and use the new key._
+
 	_Note2: you can use any name instead of `id_rsa`._
 
 ---
