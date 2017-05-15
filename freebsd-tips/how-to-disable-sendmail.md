@@ -16,6 +16,8 @@
 	sendmail_msp_queue_enable="NO"
 	```
 
+	_Note: on old fbsd versions, it was used "NONE" instead of "NO" for `sendmail_enable`_
+
 3. Stop the `sendmail` service:
 
 	```sh
