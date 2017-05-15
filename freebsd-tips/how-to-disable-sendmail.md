@@ -26,6 +26,6 @@ The main reason why someone would disable the sendmail service are usually:
 
 1. If you're using a crappy vps, it will take some hard disk usage.
 2. For better alternatives
-3: For minimal systems
+3. For minimal OSes
 
 By default sendmail should work only locally.
