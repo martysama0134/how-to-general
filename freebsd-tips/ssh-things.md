@@ -157,4 +157,28 @@ To log in with NAVICAT: (implies you use a ssh tunnelling)
 2. In the SSH tab you specify:
 	1. Authentication Method: **Public Key**
 	2. Private Key: **id_rsa.ppk`
+
 ---
+To login with root forbidding any password and allowing only the rsa ssh key:
+
+1. Open the ssh config file:
+
+	```sh
+	$ ee /etc/ssh/sshd_config
+	```
+
+2. Edit/Add the following option as such:
+
+	```sh
+	PermitRootLogin without-password
+	```
+
+	_Note: since fbsd 10.3, `without-password` has an alias called `prohibit-password`_
+
+3. Refresh the settings:
+
+	```sh
+	$ service sshd reload
+	```
+
+	_Note: by doing `reload` instead of `restart`, the already connected ssh connections will stay connected and working_
