@@ -156,7 +156,7 @@ To log in with NAVICAT: (implies you use a ssh tunnelling)
 1. Open the **Connection Properties** of the specified server
 2. In the SSH tab you specify:
 	1. Authentication Method: **Public Key**
-	2. Private Key: **id_rsa.ppk`
+	2. Private Key: `id_rsa.ppk`
 
 ---
 To login with root forbidding any password and allowing only the rsa ssh key:
