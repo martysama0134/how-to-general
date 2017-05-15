@@ -151,7 +151,7 @@ To log in with WINSCP:
 	_Note: It will automatically convert the `id_rsa` key to `id_rsa.ppk`_
 
 ---
-To log in with NAVICAT: (implies you use a ssh tunnelling)
+To log in with NAVICAT: (implies you use an ssh tunnelling)
 
 1. Open the **Connection Properties** of the specified server
 2. In the SSH tab you specify:
