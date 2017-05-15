@@ -130,7 +130,16 @@ Some applications (winscp/navicat) require a private key in `ppk` format. You ca
 
 1. Installing puttygen.exe (inside the putty package)
 2. Opening it, and loading the private key `id_rsa` by doing **Conversions -> Import key**
+
+	[![Result Label](http://i.imgur.com/hrftY9G.png)](http://i.imgur.com/hrftY9G.png)
+
+	[![Result Label](http://i.imgur.com/C57tzS8.png)](http://i.imgur.com/C57tzS8.png)
+
 3. Save the generated key by pressing the button **Save private key** as `id_rsa.ppk`
+
+	[![Result Label](http://i.imgur.com/BBFRvM1.png)](http://i.imgur.com/BBFRvM1.png)
+
+	[![Result Label](http://i.imgur.com/ei5Rfx3.png)](http://i.imgur.com/ei5Rfx3.png)
 
 ---
 To log in with WINSCP:
