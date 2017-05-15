@@ -87,7 +87,7 @@ By default, the (sftp) ssh port is 22, but it's easily swichable.
 	1. Generate the 4096 bits rsa key:
 
 		```sh
-		ssh-keygen -t rsa -b 4096
+		$ ssh-keygen -t rsa -b 4096
 		```
 		_Note: `Generating public/private rsa key pair.` can take few seconds_
 
@@ -110,7 +110,7 @@ By default, the (sftp) ssh port is 22, but it's easily swichable.
 	5. Add the public key in the authorized keys:
 
 		```sh
-		cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys2
+		$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys2
 		```
 
 		_Note: `~` is the name of the current user. If root, it will be `/root`.
@@ -118,7 +118,7 @@ By default, the (sftp) ssh port is 22, but it's easily swichable.
 	6. Now delete the generated keys: (after you saved a copy of them in your computer)
 
 		```sh
-		rm ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
+		$ rm ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
 		```
 
 	_Note: you don't need to refresh anything to enable and use the new key._
