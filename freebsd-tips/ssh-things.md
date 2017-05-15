@@ -23,6 +23,14 @@ By default, when installing the OS, root can't login via ssh, so we need to enab
 
 	_Note: by default, it's `no`. There's also another option `without-password` for enabling just login via rsa key and disabling via password._
 
+3. Refresh the settings:
+
+	```sh
+	$ service sshd reload
+	```
+
+	_Note: by doing `reload` instead of `restart`, the already connected ssh connections will stay connected and working_
+
 
 --------------------------------------------------------------------------------
 # Switch SSH port
