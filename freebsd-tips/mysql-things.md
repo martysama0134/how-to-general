@@ -64,7 +64,7 @@ You can either decide if you want it temporary or permanent.
 
 	You need to specify it in the `my.cnf` and restart the mysql-server service.
 
-	_Note: The `my.cnf` file isn't created by default when installing MySQL on freebsd. It's common path is `/etc/my.cnf` (mariadb reads it only from `/usr/local/etc/my.cnf`)_
+	_Note: The `my.cnf` file isn't created by default when installing MySQL on freebsd. Its common path is `/etc/my.cnf` (mariadb reads it only from `/usr/local/etc/my.cnf`)_
 
 	Add in the `my.cnf` file the following stuff:
 
