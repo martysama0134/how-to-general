@@ -1,7 +1,7 @@
 ---
 # Table of Contents
 * [Install MySQL](#install-mysql)
-* [Enable query logs](#Enable query logs)
+* [Enable query logs](#enable-query-logs)
 
 --------------------------------------------------------------------------------
 # Install MySQL
