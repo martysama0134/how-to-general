@@ -37,7 +37,7 @@ Mysql by default doens't enable any logging for the queries.
 To achieve that, we have two ways to do so:
 
 * Via Mysql Table `mysql.general_log`
-* Via Logging File `mysql.log`
+* Via Logging File `mysql_general.log`
 
 You can either decide if you want it temporary or permanent.
 
