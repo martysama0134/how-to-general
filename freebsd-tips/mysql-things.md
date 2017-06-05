@@ -1,6 +1,7 @@
 ---
 # Table of Contents
 * [Install MySQL](#install-mysql)
+* [Default root password](#default-root-password)
 * [Enable query logs](#enable-query-logs)
 
 --------------------------------------------------------------------------------
@@ -29,6 +30,25 @@ $ service mysql-server start
 ```
 
 _Note: in the command it's specified mysql 5.5, but you can use the version you want._
+
+--------------------------------------------------------------------------------
+# Default root password
+The default `root@localhost` password is usually blank, but since MySQL 5.7 it's randomly generated after the `mysql-server` service is started for the first time.
+
+The randomly generated password is written inside `~/.mysql_secret`, and we can get it by doing:
+
+```sh
+$ head -2 ~/.mysql_secret | tail -1
+```
+
+We can't process any query until we change the password, so we do:
+
+```sh
+$ mysqladmin -uroot -p password
+Enter password:
+New password:
+Confirm new password:
+```
 
 --------------------------------------------------------------------------------
 # Enable query logs
