@@ -37,4 +37,4 @@
 If you're afraid of getting locked out, you can try this way:
 
 1. Use the `firewall_enable="NO"` option inside `/etc/rc.conf`
-1. Start the service with the command `service ipfw onestart && sleep 60 && service ipfw onestop` (ipfw will be stopped after 60 seconds)
+1. Start the service with the command `service ipfw onestart && sleep 60 && service ipfw onestop &` (ipfw will be stopped after 60 seconds)
