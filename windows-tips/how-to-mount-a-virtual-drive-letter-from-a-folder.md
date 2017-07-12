@@ -27,16 +27,26 @@ All you need to do is to create these two `.bat` files and add them **inside** `
 
 	Run this file if you want to unmount the virtualized `D:`
 
-_Note: if you want to see the virtual mounted `D:` folder in the admin-runned programs (e.g. PS/3dsMax), run the `mount_d.bat` as admin as well! (twice: one normal, one as admin)_
+_Note: if you want to see the virtual mounted `D:` folder in the admin-runned programs (e.g. PS/3dsMax), run the `mount_d.bat` as admin as well! (twice: one normal as user, one as admin)_
 
 _Note2: if you have another component like a CD/DVD burner as `D:`, you can simply switch it very easily in few seconds! [Google it](https://www.google.com/search?q=How+to+Change+a+Drive+Letter)_
 
 
 ## Screenshots
 
-[![Result Label](http://i.imgur.com/wrpzNks.png)](http://i.imgur.com/wrpzNks.png)
+* [![Result Label](http://i.imgur.com/wrpzNks.png)](http://i.imgur.com/wrpzNks.png)
 
-[![Result Label](http://i.imgur.com/ITTkPGg.png)](http://i.imgur.com/ITTkPGg.png)
+	_`C:\D\` folder containing the `.bat` files_
 
-[![Result Label](http://i.imgur.com/ANeqjaJ.png)](http://i.imgur.com/ANeqjaJ.png)
+* [![Result Label](http://i.imgur.com/ITTkPGg.png)](http://i.imgur.com/ITTkPGg.png)
+
+	_`D:` will look like `C:` in the matter of remaining space_
+
+* [![Result Label](http://i.imgur.com/ANeqjaJ.png)](http://i.imgur.com/ANeqjaJ.png)
+
+	_The content of `D:\` will look like `C:\D\`_
+
+* [![Result Label](http://i.imgur.com/K1eP7MV.png)](http://i.imgur.com/K1eP7MV.png)
+
+	_How to run the `.bat`s as admin_
 
