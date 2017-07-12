@@ -15,3 +15,5 @@ _Note: a `timeout` is required if you want to open them in a specific order and 
 _Note2: in this case, it will open 2 folders specified in the 2nd argument of the `start` instruction_
 
 ...And then run the newly created `defdirs.bat`!
+
+_Note3: some people use `explorer` instead of `start`, but it will create a new `explorer.exe` in that case_
