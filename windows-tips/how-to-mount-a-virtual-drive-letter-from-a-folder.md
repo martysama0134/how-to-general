@@ -8,9 +8,9 @@ For example, you could use a folder like `C:\D\` as `D:`!
 
 All you need to do is to create these two `.bat` files and add them **inside** `C:\D\`!
 
-* `mount_d.bat`
+* **mount_d.bat**
 
-	```sh
+	```batch
 	@cd %~dp0
 	@subst d: .
 	@pause
@@ -18,9 +18,9 @@ All you need to do is to create these two `.bat` files and add them **inside** `
 
 	Run this file if you want to mount the current folder as `D:`
 
-* `unmount_d.bat`
+* **unmount_d.bat**
 
-	```sh
+	```batch
 	@subst d: /D
 	@pause
 	```
@@ -34,7 +34,7 @@ _Note2: if you have another component like a CD/DVD burner as `D:`, you can simp
 
 ## Screenshots
 
-* _`C:\D\` folder containing the `.bat` files_
+* _The `C:\D\` folder containing the `.bat` files_
 
 	[![Result Label](http://i.imgur.com/wrpzNks.png)](http://i.imgur.com/wrpzNks.png)
 
