@@ -34,19 +34,19 @@ _Note2: if you have another component like a CD/DVD burner as `D:`, you can simp
 
 ## Screenshots
 
-* [![Result Label](http://i.imgur.com/wrpzNks.png)](http://i.imgur.com/wrpzNks.png)
+* _`C:\D\` folder containing the `.bat` files_
 
-	_`C:\D\` folder containing the `.bat` files_
+	[![Result Label](http://i.imgur.com/wrpzNks.png)](http://i.imgur.com/wrpzNks.png)
 
-* [![Result Label](http://i.imgur.com/ITTkPGg.png)](http://i.imgur.com/ITTkPGg.png)
+* _`D:` will look like `C:` in the matter of remaining space_
 
-	_`D:` will look like `C:` in the matter of remaining space_
+	[![Result Label](http://i.imgur.com/ITTkPGg.png)](http://i.imgur.com/ITTkPGg.png)
 
-* [![Result Label](http://i.imgur.com/ANeqjaJ.png)](http://i.imgur.com/ANeqjaJ.png)
+* _The content of `D:\` will look like `C:\D\`_
 
-	_The content of `D:\` will look like `C:\D\`_
+	[![Result Label](http://i.imgur.com/ANeqjaJ.png)](http://i.imgur.com/ANeqjaJ.png)
 
-* [![Result Label](http://i.imgur.com/K1eP7MV.png)](http://i.imgur.com/K1eP7MV.png)
+* _How to run the `.bat`s as admin_
 
-	_How to run the `.bat`s as admin_
+	[![Result Label](http://i.imgur.com/K1eP7MV.png)](http://i.imgur.com/K1eP7MV.png)
 
