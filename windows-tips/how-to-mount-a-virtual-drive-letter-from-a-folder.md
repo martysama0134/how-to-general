@@ -6,7 +6,7 @@ If you don't have the possibility to create a `D:` partition, you can easily sol
 
 For example, you could use a folder like `C:\D\` as `D:`!
 
-All you need to do is to create these two `.bat` files and add them *inside* `C:\D\`!
+All you need to do is to create these two `.bat` files and add them **inside** `C:\D\`!
 
 * `mount_d.bat`
 
