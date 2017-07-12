@@ -32,7 +32,7 @@ _Note: if you want to see the virtual mounted `D:` folder in the admin-runned pr
 _Note2: if you have another component like a CD/DVD burner as `D:`, you can simply switch it very easily in few seconds! [Google it](https://www.google.com/search?q=How+to+Change+a+Drive+Letter)_
 
 
-Screenshots:
+## Screenshots
 
 [![Result Label](http://i.imgur.com/wrpzNks.png)](http://i.imgur.com/wrpzNks.png)
 
