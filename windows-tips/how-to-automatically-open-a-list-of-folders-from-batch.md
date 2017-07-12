@@ -10,7 +10,8 @@ timeout 1
 start "" "C:\Python27"
 ```
 
-_Note: a timeout is required if you want to open them in a specific order and not randomly_
+_Note: a `timeout` is required if you want to open them in a specific order and not randomly_
+
 _Note2: in this case, it will open 2 folders specified in the 2nd argument of the `start` instruction_
 
 and then run the newly created `defdirs.bat`!
