@@ -30,3 +30,13 @@ All you need to do is to create these two `.bat` files and add them **inside** `
 _Note: if you want to see the virtual mounted `D:` folder in the admin-runned programs (e.g. PS/3dsMax), run the `mount_d.bat` as admin as well! (twice: one normal, one as admin)_
 
 _Note2: if you have another component like a CD/DVD burner as `D:`, you can simply switch it very easily in few seconds! [Google it](https://www.google.com/search?q=How+to+Change+a+Drive+Letter)_
+
+
+Screenshots:
+
+[![Result Label](http://i.imgur.com/wrpzNks.png)](http://i.imgur.com/wrpzNks.png)
+
+[![Result Label](http://i.imgur.com/ITTkPGg.png)](http://i.imgur.com/ITTkPGg.png)
+
+[![Result Label](http://i.imgur.com/ANeqjaJ.png)](http://i.imgur.com/ANeqjaJ.png)
+
