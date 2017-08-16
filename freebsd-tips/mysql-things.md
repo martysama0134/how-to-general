@@ -52,7 +52,7 @@ Confirm new password:
 
 --------------------------------------------------------------------------------
 # Enable query logs
-Mysql by default doens't enable any logging for the queries.
+Mysql by default doesn't enable any logging for the queries.
 
 To achieve that, we have two ways to do so:
 
