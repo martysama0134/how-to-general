@@ -3,7 +3,7 @@
 1. Copy your `ipfw.rules` inside /etc/
 
 	```sh
-	$ cp rc.conf /etc/
+	$ cp ipfw.rules /etc/
 	```
 
 	_Note: Be sure the rules don't have \r\n lines (CRLN windows lines), but only \n lines (Unix LN lines), otherwise you get locked out!_
