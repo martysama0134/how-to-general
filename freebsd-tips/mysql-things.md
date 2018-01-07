@@ -31,6 +31,8 @@ $ service mysql-server start
 
 _Note: in the command it's specified mysql 5.5, but you can use the version you want._
 
+_Note2: in Mysql 8.0, inside `/usr/local/etc/mysql/my.cnf`, comment with "#" the parameter line `bind-address = 127.0.0.1` to enable non-localhost connections!_
+
 --------------------------------------------------------------------------------
 # Default root password
 The default `root@localhost` password is usually blank, but since MySQL 5.7 it's randomly generated after the `mysql-server` service is started for the first time.
