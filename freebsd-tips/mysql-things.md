@@ -13,7 +13,7 @@ Follow the following commands:
 $ pkg update -f
 
 # install the mysql server package
-$ pkg install mysql55-server
+$ pkg install mysql56-server
 
 # fix the mysql user in case of corrupted user creation
 $ pwd_mkdb -p /etc/master.passwd
@@ -29,7 +29,7 @@ $ echo 'mysql_enable="YES"' >> /etc/rc.conf
 $ service mysql-server start
 ```
 
-_Note: in the command it's specified mysql 5.5, but you can use the version you want._
+_Note: in the command it's specified mysql 5.6, but you can use the version you want._
 
 _Note2: in MySQL 8.0, inside `/usr/local/etc/mysql/my.cnf`, comment with "#" the parameter line `bind-address = 127.0.0.1` to enable non-localhost connections!_
 
