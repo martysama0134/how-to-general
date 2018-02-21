@@ -229,9 +229,17 @@ We need to create such file in the repository's root folder, and not in sub-fold
 ### unix (always lf)
 *.sh eol=lf
 #*.bash eol=lf
+#*.py eol=lf
 
 ### binaries
 *.rar binary
+*.7z binary
+*.zip binary
+*.tar binary
+*.tgz binary
+*.tbz binary
+*.gz binary
+*.bz binary
 ```
 
 As you can imagine, .sh files's EOL will be converted to `lf`, and .bat files's EOL to `crlf`. The .rar files will be considered as `binary`.
