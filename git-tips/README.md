@@ -221,11 +221,14 @@ We need to create such file in the repository's root folder, and not in sub-fold
 ### windows (always crlf)
 *.bat eol=crlf
 *.sln eol=crlf
+#*.filters eol=crlf
+#*.users eol=crlf
 #*.vcxproj eol=crlf
-#*.*proj* eol=crlf
+#*.*proj eol=crlf
 
 ### unix (always lf)
 *.sh eol=lf
+#*.bash eol=lf
 
 ### binaries
 *.rar binary
