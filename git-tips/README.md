@@ -200,6 +200,12 @@ If we would set the same EOL for all the text files, we could invalidate many of
 $ git config --global core.autocrlf false
 ```
 
+You can unset it by doing:
+
+```sh
+$ git config --global --unset core.autocrlf
+```
+
 _Note: Different git clients than msysgit handle `core.autocrlf`, `core.eol`, and `.gitattributes` differently causing ambiguous walls of pink._
 
 _Note2: More info here [topic1](http://stackoverflow.com/questions/3206843), [topic2](http://stackoverflow.com/questions/2333424)_
