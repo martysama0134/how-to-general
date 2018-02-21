@@ -214,21 +214,24 @@ If you've followed the "Part 1", you should have set `core.autocrlf` as **false*
 We need to create such file in the repository's root folder, and not in sub-folders. An example of the `.gitattribute` is:
 
 ```ini
-# default behavior
-* text=auto
+### default behavior
+* text=auto eol=lf
+## note: eol in text auto is fixed since git 2.10 (31 aug 2016)
 
-# git files
-.gitattributes eol=lf
-.gitignore eol=lf
-
-# shell scripts
+### windows (always crlf)
 *.bat eol=crlf
+*.sln eol=crlf
+#*.vcxproj eol=crlf
+#*.*proj* eol=crlf
+
+### unix (always lf)
 *.sh eol=lf
 
+### binaries
 *.rar binary
 ```
 
-As you can imagine, .sh, .gitattributes, and .gitignore files's EOL will be converted to `lf`, and .bat files's EOL to `crlf`. The .rar files will be considered as `binary`.
+As you can imagine, .sh files's EOL will be converted to `lf`, and .bat files's EOL to `crlf`. The .rar files will be considered as `binary`.
 
 The `text=auto` directive will enable EOL normalization on text files (it's a replacement of `core.autocrlf`), and use the `core.eol` (or eol directive) parameter to convert the EOL.
 
@@ -239,12 +242,22 @@ As summary, the meaning of these keywords:
 * `-text` turns off eol normalization
 * `eol=crlf` sets the eol normalization character to `crlf`
 * `eol=lf` sets the eol normalization character to `lf`
+* `!eol` treats the `eol` attribute as unset (regardless of the user/global settings)
 * `diff` turns on textual diff patch generation
 * `diff=<name>` turns on textual diff patch generation using the specified <name> driver
 * `-diff` turns off textual diff patch generation (binary diff will be applied on the relative file)
 * `binary` is a short-cut for `-text -diff`
 
-_...to be completed..._
+After adding a `.gitattributes` file in the repositories, you need to adjust the index again.
+
+```sh
+$ rm .git/index
+$ git add .
+$ git commit -m "+fix eol"
+$ git push
+```
+
+_Note: You also need to clone (or checkout) again the whole repository if you want to automatically fetch all the files with the correct EOL._
 
 ---
 ##### How to refresh after changing gitignore and gitattributes
