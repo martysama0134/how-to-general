@@ -1,5 +1,5 @@
 
----
+--------------------------------------------------------------------------------
 # Table of Contents
 * [Intro](#intro)
 * [Git-files Download](#git-files-download)
@@ -25,11 +25,11 @@
 	* [How to show and delete all the gitignored files](#how-to-show-and-delete-all-the-gitignored-files)
 	* [Other Git Tips](#other-git-tips)
 
----
+--------------------------------------------------------------------------------
 ## Intro
 This repository will contain all the fundamental tips for git.
 
----
+--------------------------------------------------------------------------------
 ## Git-files Download
 * Git Clients (GUI)
 	* [GitEye](http://www.collab.net/downloads/giteye)
@@ -44,10 +44,10 @@ This repository will contain all the fundamental tips for git.
 	* [Pro Git v2](http://git-scm.com/book/en/v2)
 	* [Others](http://git-scm.com/doc/ext)
 
----
+--------------------------------------------------------------------------------
 ## Git Tips
 
----
+--------------------------------------------------------------------------------
 ##### How to commit stuff
 
 Check which files are staged or untracked with `git status`:
@@ -117,7 +117,7 @@ $ git checkout -- <filename1> <filename2>
 
 ```
 
----
+--------------------------------------------------------------------------------
 ##### How to add author info
 
 ```sh
@@ -125,14 +125,14 @@ $ git config --global user.email you@example.com
 $ git config --global user.name "Your Name"
 ```
 
----
+--------------------------------------------------------------------------------
 ##### How to skip SSL certificate validation check
 
 ```sh
 $ git config --global http.sslverify false
 ```
 
----
+--------------------------------------------------------------------------------
 ##### How to enable the colors in shell
 
 To enable the colors if they are not present:
@@ -147,7 +147,7 @@ On BSD, the colors are not displayed and you see ESC[r] instead. You solve it wi
 $ git config --global core.pager 'less -R'
 ```
 
----
+--------------------------------------------------------------------------------
 ##### How to setup a credential-helper for git
 
 * Temporary (stored in ram/cache)
@@ -188,7 +188,7 @@ $ git config --global core.pager 'less -R'
 
 * [Other ways](http://stackoverflow.com/questions/5343068)
 
----
+--------------------------------------------------------------------------------
 ##### How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion
 
 The "Wall of Pink" is the dreadful commit where it removes and re-adds all the lines of a file. It usually happens due to a diff misconception of handling cr/lf EOL characters.
@@ -211,7 +211,7 @@ _Note: Different git clients than msysgit handle `core.autocrlf`, `core.eol`, an
 
 _Note2: More info here [topic1](http://stackoverflow.com/questions/3206843), [topic2](http://stackoverflow.com/questions/2333424)_
 
----
+--------------------------------------------------------------------------------
 ##### How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion
 
 As previously said, we can use the `.gitattibutes` file to handle the EOL character to use, some diff options, whether a file should be considered as text or binary, and so on.
@@ -277,7 +277,7 @@ $ git push
 
 _Note: You also need to clone (or checkout) again the whole repository if you want to automatically fetch all the files with the correct EOL._
 
----
+--------------------------------------------------------------------------------
 ##### How to refresh after changing gitignore and gitattributes
 Be sure you have committed everything before doing this.
 
@@ -296,7 +296,7 @@ git add .
 git commit -m "+gitignore and gitattributes fix"
 ```
 
----
+--------------------------------------------------------------------------------
 ##### How to rename a branch
 
 * To rename the current local branch:
@@ -327,7 +327,7 @@ $ git branch --set-upstream-to=upstream/<new_branch_name> <new_branch_name>
 $ git fetch origin --prune
 ```
 
----
+--------------------------------------------------------------------------------
 ##### How to delete a branch
 
 * To delete a local branch:
@@ -342,7 +342,7 @@ $ git fetch origin --prune
 	$ git push origin :<branch_name>
 	```
 
----
+--------------------------------------------------------------------------------
 ##### How to create a diff between branches or commits
 
 * To generate a textual diff between commits:
@@ -385,7 +385,7 @@ $ git fetch origin --prune
 	$ git apply -p1 < masterb2_vs_master.diff
 	```
 
----
+--------------------------------------------------------------------------------
 ##### How to create a diff between branches or commits (2nd way - auto commit)
 
 * To generate a diff between a branch "master" and "retsam" considering hierarchy (using `...` instead of `..`) and EOL skipping (using `--ignore-space-at-eol`):
@@ -400,7 +400,7 @@ $ git fetch origin --prune
 	$ git am -3 -k < master_vs_retsam.patch
 	```
 
----
+--------------------------------------------------------------------------------
 ##### How to archive a git repository
 
 You can decide to archive either an entire repository (whether or not including the history) or just one or more branches/tags.
@@ -502,7 +502,7 @@ You can decide to archive either an entire repository (whether or not including 
 
 _Note: Another way is via [`git fast-export`](https://git-scm.com/docs/git-fast-export) | [`git fast-import`](https://git-scm.com/docs/git-fast-import)_
 
----
+--------------------------------------------------------------------------------
 ##### How to merge several git repositories
 You have to upgrade git to the 2.x version and then follow these commands:
 
@@ -515,7 +515,7 @@ git remote remove project-a
 
 _Note: [Source discussion](http://stackoverflow.com/questions/1425892/#10548919)_
 
----
+--------------------------------------------------------------------------------
 ##### How to show tracked ignored files
 
 ```sh
@@ -529,7 +529,7 @@ $ git showtrackedignored
 
 _Note: [Source discussion](http://stackoverflow.com/questions/9320218/#9370094)_
 
----
+--------------------------------------------------------------------------------
 ##### How to get the count of the commits made
 Simply:
 
@@ -549,7 +549,7 @@ $ git shortlog -s
 	571	martysama0134
 ```
 
----
+--------------------------------------------------------------------------------
 ##### How to delete a file from the whole history
 If you have several commits, it will take almost 1 second per commit to remove the relative file and rewrite the history.
 
@@ -593,7 +593,7 @@ $ git filter-branch --index-filter 'git rm -r --ignore-unmatch --cached Srcs/Too
 
 _Note: [Source discussion](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery#_removing_objects)_
 
----
+--------------------------------------------------------------------------------
 ##### How to delete a file from the whole history Alternative
 There's a faster way (500 times faster than `git filter-branch`) to delete files from the whole history, and it's using [BFG](https://rtyley.github.io/bfg-repo-cleaner/).
 
@@ -602,7 +602,9 @@ $ java -jar bfg.jar --delete-files "*.{rar,zip,7z,tar,tgz,tbz,gz,bz,exe,lib,dll}
 $ cd <reponame> && git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
 
----
+_Note: By default, it won't delete any files in the last commit._
+
+--------------------------------------------------------------------------------
 ##### How to show and delete all the gitignored files
 To show all the gitignored files (and directories with -d specified):
 
@@ -616,6 +618,6 @@ To delete all of them:
 $ git clean -xdf
 ```
 
----
+--------------------------------------------------------------------------------
 ##### Other Git Tips
 [Customizing Git - Git Configuration](https://git-scm.com/book/it/v2/Customizing-Git-Git-Configuration)
