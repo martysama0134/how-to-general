@@ -21,6 +21,7 @@
 	* [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
 	* [How to get the count of the commits made](#how-to-get-the-count-of-the-commits-made)
 	* [How to delete a file from the whole history](#how-to-delete-a-file-from-the-whole-history)
+	* [How to delete a file from the whole history Alternative](#how-to-delete-a-file-from-the-whole-history-alternative)
 	* [How to show and delete all the gitignored files](#how-to-show-and-delete-all-the-gitignored-files)
 	* [Other Git Tips](#other-git-tips)
 
@@ -591,6 +592,15 @@ $ git filter-branch --index-filter 'git rm -r --ignore-unmatch --cached Srcs/Too
 ```
 
 _Note: [Source discussion](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery#_removing_objects)_
+
+---
+##### How to delete a file from the whole history Alternative
+There's a faster way (500 times faster than `git filter-branch`) to delete files from the whole history, and it's using [BFG](https://rtyley.github.io/bfg-repo-cleaner/).
+
+```sh
+$ java -jar bfg.jar --delete-files "*.{rar,zip,7z,tar,tgz,tbz,gz,bz,exe,lib,dll}" <reponame>
+$ cd <reponame> && git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
 
 ---
 ##### How to show and delete all the gitignored files
