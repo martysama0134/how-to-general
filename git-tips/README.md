@@ -11,7 +11,6 @@
 	* [How to setup a credential-helper for git](#how-to-setup-a-credential-helper-for-git)
 	* [How to prevent the Wall of Pink issue - Part 1 - Disable the default EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-1---disable-the-default-eol-conversion)
 	* [How to prevent the Wall of Pink issue - Part 2 - Specify your own EOL conversion](#how-to-prevent-the-wall-of-pink-issue---part-2---specify-your-own-eol-conversion)
-	* [How to refresh after changing gitignore and gitattributes](#how-to-refresh-after-changing-gitignore-and-gitattributes)
 	* [How to rename a branch](#how-to-rename-a-branch)
 	* [How to delete a branch](#how-to-delete-a-branch)
 	* [How to create a diff between branches or commits](#how-to-create-a-diff-between-branches-or-commits)
@@ -280,25 +279,6 @@ To update the EOL of the current files, you only need to do: (instead of re-clon
 ```sh
 $ git rm --cached -r .
 $ git reset --hard
-```
-
---------------------------------------------------------------------------------
-##### How to refresh after changing gitignore and gitattributes
-Be sure you have committed everything before doing this.
-
-You have to clear the repository Index and re-add all the files again.
-
-Doing this, all the files will be processed again with the new rules of `.gitignore` and `.gitattributes`:
-
-```sh
-# clear the index
-git rm -r --cached .
-
-# re-add all the files
-git add .
-
-# commit the changes
-git commit -m "+gitignore and gitattributes fix"
 ```
 
 --------------------------------------------------------------------------------
