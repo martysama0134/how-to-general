@@ -275,7 +275,12 @@ $ git commit -m "+fix eol"
 $ git push
 ```
 
-_Note: You also need to clone (or checkout) again the whole repository if you want to automatically fetch all the files with the correct EOL._
+To update the EOL of the current files, you only need to do: (instead of re-cloning the whole repo)
+
+```sh
+$ git rm --cached -r .
+$ git reset --hard
+```
 
 --------------------------------------------------------------------------------
 ##### How to refresh after changing gitignore and gitattributes
