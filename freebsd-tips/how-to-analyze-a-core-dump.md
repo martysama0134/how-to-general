@@ -7,7 +7,7 @@ We go to the relative path in which the executable and the core dump has been ge
 After that, we send some specific instructions.
 
 ```sh
-# we go to the specific path
+# we go to the specific path (this is just an example of path)
 cd /usr/home/main/srv1/chan/ch1/core1/
 # we run gdb (or gdb811 if updated; numbers may change)
 gdb
@@ -34,3 +34,5 @@ pkg install gdb-8
 ```
 
 The instruction `bt full` returns the full backtrace, instead of doing just `bt`.
+
+On updated fbsd versions, the gnutarget may be `i386-portbld-freebsd10.1` instead of `i386-marcel-freebsd`.
