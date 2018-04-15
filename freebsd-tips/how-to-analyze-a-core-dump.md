@@ -36,3 +36,5 @@ pkg install gdb-8
 The instruction `bt full` returns the full backtrace, instead of doing just `bt`.
 
 On updated fbsd versions, the gnutarget may be `i386-portbld-freebsd10.1` instead of `i386-marcel-freebsd`.
+
+Important: the executable must be the original one; recompiled executables will give mismatched results.
