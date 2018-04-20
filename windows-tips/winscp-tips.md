@@ -41,3 +41,21 @@ WinSCP has some settings you can change to improve its usage:
 	Transfer mode -> (o) Binary (archives, doc, ...)
 
 	Common options -> [_] Preserve timestamp
+
+6. Hide the queue list when empty (annoying) [ClickMe](https://i.imgur.com/K6AevYp.png)
+
+	,, -> Transfer -> Background
+
+	Display completed transfer in queue for: Never
+
+	Queue list -> (o) Hide when empty
+
+7. Open putty (autologged in) by pressing Ctrl+P on WinSCP [ClickMe](https://i.imgur.com/2jjAfSF.png)
+
+	,, -> Integration -> Applications
+
+	PuTTy/Terminal client path: `%PROGRAMFILES%\PuTTY\putty.exe` (this is the default path when installing putty)
+
+	[v] Remember session password and pass it to PuTTY (SSH)
+
+
