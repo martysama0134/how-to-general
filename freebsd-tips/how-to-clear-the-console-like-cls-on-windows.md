@@ -13,3 +13,11 @@
 	clear
 	printf '\033[3J'
 	```
+
+1. Give permission:
+
+	```sh
+	$ chmod u+x /usr/local/bin/cls
+	```
+
+_Note: this is especially done for PuTTy._
