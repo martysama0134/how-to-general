@@ -30,7 +30,7 @@ pkg search gdb
 >gdb-8.1_1                      GNU GDB of newer version than comes with the system
 # install it
 pkg install gdb-8
-# now to run it, you must call it gdb811 instead of gdb
+# now to run it, you must call it gdb81 instead of gdb
 ```
 
 The instruction `bt full` returns the full backtrace, instead of doing just `bt`.
