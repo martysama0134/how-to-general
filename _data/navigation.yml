@@ -1,0 +1,6 @@
+- name: Home
+  link: /
+- name: Notepad++ Tips
+  link: /windows-tips/notepadpp-tips.md
+- name: WinSCP Tips
+  link: /windows-tips/winscp-tips.md
