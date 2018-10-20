@@ -18,6 +18,7 @@
 	* [How to archive a git repository](#how-to-archive-a-git-repository)
 	* [How to merge several git repositories](#how-to-merge-several-git-repositories)
 	* [How to show tracked ignored files](#how-to-show-tracked-ignored-files)
+	* [How to get the size of the repository](#how-to-get-the-size-of-the-repository)
 	* [How to get the count of the commits made](#how-to-get-the-count-of-the-commits-made)
 	* [How to delete a file from the whole history](#how-to-delete-a-file-from-the-whole-history)
 	* [How to delete a file from the whole history Alternative](#how-to-delete-a-file-from-the-whole-history-alternative)
@@ -513,6 +514,16 @@ $ git showtrackedignored
 ```
 
 _Note: [Source discussion](http://stackoverflow.com/questions/9320218/#9370094)_
+
+--------------------------------------------------------------------------------
+##### How to get the size of the repository
+Simply:
+```sh
+# clean
+$ git gc
+# display the size
+$ git count-objects -vH
+```
 
 --------------------------------------------------------------------------------
 ##### How to get the count of the commits made
