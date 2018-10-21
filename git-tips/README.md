@@ -519,9 +519,9 @@ _Note: [Source discussion](http://stackoverflow.com/questions/9320218/#9370094)_
 ##### How to get the size of the repository
 Simply:
 ```sh
-# clean
+# cleanup the unnecessary files
 $ git gc
-# display the size
+# display the size of the repo in megabytes
 $ git count-objects -vH
 ```
 
