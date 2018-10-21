@@ -594,7 +594,9 @@ _Note: [Source discussion](https://git-scm.com/book/en/v2/Git-Internals-Maintena
 There's a faster way (500 times faster than `git filter-branch`) to delete files from the whole history, and it's using [BFG](https://rtyley.github.io/bfg-repo-cleaner/).
 
 ```sh
+# remove the following extensions from history (if they are missing in the last commit)
 $ java -jar bfg.jar --delete-files "*.{rar,zip,7z,tar,tgz,tbz,gz,bz,exe,lib,dll}" <reponame>
+# clear definitely all the removed files
 $ cd <reponame> && git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
 
