@@ -57,7 +57,7 @@ To fix it, we need to configure it manually:
 
 ## Note:
 
-1. `pkg.freebsd.org.2013102301` is a simple textual file containing: (with a newline in the end)
+1. `pkg.freebsd.org.2013102301` is a simple textual file containing: (with a newline at the end)
 
 	```
 	# $FreeBSD$
