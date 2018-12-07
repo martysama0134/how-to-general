@@ -3,6 +3,7 @@
 * [Install MySQL](#install-mysql)
 * [Default root password](#default-root-password)
 * [Enable query logs](#enable-query-logs)
+* [Move the mysql data folder](#move-the-mysql-data-folder)
 
 --------------------------------------------------------------------------------
 # Install MySQL
@@ -116,4 +117,20 @@ You can either decide if you want it temporary or permanent.
 _Note: In case you decide to write the logs in the files, be sure the user `mysql` has the permission to write in that specific path._
 
 _Note2: To disable the logging, be sure general_log is simply set to `0` via query or to `off` via config._
+
+--------------------------------------------------------------------------------
+# Move the mysql data folder
+By default, the mysql data folder is located to /var/db/mysql (it's created when the mysql-server starts, if missing).
+
+To switch the path, you just need to specify it inside `/etc/rc.conf` as such:
+
+```ini
+mysql_dbdir="/home/mysql/"
+```
+
+then restart the service:
+
+```sh
+$ service mysql-server restart
+```
 
