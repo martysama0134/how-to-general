@@ -132,7 +132,7 @@ then restart the service:
 
 ```sh
 $ service mysql-server restart
-# give the mysql privileges to the mysql folders
+# give the privileges to the mysql group & user privileges for the new mysql folder
 $ chown -R mysql /home/mysql/
 $ chgrp -R mysql /home/mysql/
 ```
