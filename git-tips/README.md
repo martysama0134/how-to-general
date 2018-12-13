@@ -115,6 +115,9 @@ $ git checkout -- <filename1> <filename2>
 $ git reset HEAD <filename1> <filename2>
 $ git checkout -- <filename1> <filename2>
 
+# how to reset the local repository as it is in the remote one
+$ git reset --hard origin/master
+
 ```
 
 --------------------------------------------------------------------------------
