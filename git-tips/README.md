@@ -63,7 +63,7 @@ Untracked files:
 
 We can say that `TODO.txt` has been modified, and `NEWSTUFF.txt` is a new file yet to be added to the repository's index.
 
-We have two ways to commit the modified `TODO.txt`:
+We have several ways to commit the modified `TODO.txt`:
 
 1. We can add it, and then commit it:
 
@@ -76,6 +76,13 @@ We have two ways to commit the modified `TODO.txt`:
 
 	```sh
 	$ git commit -am "your message"
+	```
+
+3. We can simply add all the files with `-A` option, and then commit:
+
+	```sh
+	$ git add -A
+	$ git commit -m "your message"
 	```
 
 In either cases, `NEWSTUFF.txt` won't be added because it's an **untracked** file.
