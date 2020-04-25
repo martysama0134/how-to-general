@@ -24,7 +24,7 @@ $ chown -R mysql /var/db/mysql/
 $ chgrp -R mysql /var/db/mysql/
 
 # enable mysql at boot starting
-$ echo 'mysql_enable="YES"' >> /etc/rc.conf
+$ sysrc mysql_enable="YES"
 
 # start the mysql server service
 $ service mysql-server start

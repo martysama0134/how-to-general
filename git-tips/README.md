@@ -96,6 +96,13 @@ Below, the same example written above that includes `NEWSTUFF.txt` too:
 	$ git commit -am "your message"
 	```
 
+3. We can simply add all the files with `-A` option, and then commit:
+
+	```sh
+	$ git add -A
+	$ git commit -m "your message"
+	```
+
 Beside `git add` we also have other instructions. Here a list:
 
 ```sh
