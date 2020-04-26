@@ -70,4 +70,8 @@ $ rm -rf jailsrc
 ### create home2
 $ mkdir -p /home/jails/jailsrc/home
 $ ln -s /home/jails/jailsrc/home /home2
+
+### to exit from the shell
+$ exit
+### (or CTRL+D)
 ```
