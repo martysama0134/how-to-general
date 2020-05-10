@@ -17,7 +17,7 @@ $ tar xpf base.txz;rm -rf boot;rm base.txz
 $ cp /etc/resolv.conf /home/jails/jailsrc/etc/resolv.conf
 ```
 
-#### Copy [`jail.conf`](res/jail.conf) in `/etc/`: (end lines as \n and not \r\n)
+#### Copy [`jail.conf`](res/jail.conf) in `/etc/`: (end lines as \n LF and not \r\n CRLF)
 ```sh
 allow.raw_sockets = 1;
 exec.clean;
