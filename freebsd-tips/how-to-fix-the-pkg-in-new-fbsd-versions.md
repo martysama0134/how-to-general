@@ -1,4 +1,4 @@
-# how-to-fix-the-pkg-in-new-fbsd-versions
+# How to fix the pkg in new Freebsd versions
 
 In case you got this issue:
 ```
