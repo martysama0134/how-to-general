@@ -44,7 +44,7 @@ It's mostly for me.
 1. Install the missing packages:
 	```sh
 	pkg update -f
-	pkg install mysql56-server git python python2 python3 gmake gcc10
+	pkg install mysql56-server git python gmake gcc10
 	```
 
 1. `/etc/rc.conf` should look like this:
@@ -58,3 +58,6 @@ It's mostly for me.
 	dumpdev="AUTO"
 	mysql_enable="NO"
 	```
+
+1. Add this setting in order to cache the git credentials on freebsd (until reboot):
+```git config --global credential.helper "cache --timeout=9993600"```
