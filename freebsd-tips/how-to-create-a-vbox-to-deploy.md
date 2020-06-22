@@ -34,3 +34,27 @@ It's mostly for me.
 		1. write `PermitRootLogin yes`
 		1. save with ctrl+c and write "exit"
 		1. `shutdown -r now`
+1. Unmount the iso disk, and reboot (press Reset)
+1. Login
+	- host: localhost
+	- port: 10022
+	- user: root
+	- password: password
+
+1. Install the missing packages:
+	```sh
+	pkg update -f
+	pkg install mysql56-server git python python2 python3 gmake gcc10
+	```
+
+1. `/etc/rc.conf` should look like this:
+	```sh
+	clear_tmp_enable="YES"
+	syslogd_flags="-ss"
+	sendmail_enable="NONE"
+	hostname="localhost.freebsd.org"
+	ifconfig_em0="DHCP"
+	sshd_enable="YES"
+	dumpdev="AUTO"
+	mysql_enable="NO"
+	```
