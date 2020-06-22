@@ -78,5 +78,7 @@ It's mostly for me.
 1. Close the VM with "send the shutdown signal" option.
 1. In Virtualbox window: File -> Export virtual application
 	- Format OVF 2.0
+	- File with "(clean)"
+	- In every Settings info -> My website url
 
 Done.
