@@ -74,3 +74,9 @@ It's mostly for me.
 	pkg search gdb
 	pkg install gdb-9.2
 	```
+
+1. Close the VM with "send the shutdown signal" option.
+1. In Virtualbox window: File -> Export virtual application
+	- Format OVF 2.0
+
+Done.
