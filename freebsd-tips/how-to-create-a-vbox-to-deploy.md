@@ -4,7 +4,7 @@ It's mostly for me.
 1. Create a new vm from virtualbox, allocate 2048 (2gb) of ram and 14gb of space.
 1. After created the vm,
 	close every virtualbox window,
-	and open the relative `%userprofile%\VirtualBox VMs\<machinename>\<machinename>.vbox
+	and open the relative `%userprofile%\VirtualBox VMs\<machinename>\<machinename>.vbox`
 
 	then replace `<NAT/>` with
 
