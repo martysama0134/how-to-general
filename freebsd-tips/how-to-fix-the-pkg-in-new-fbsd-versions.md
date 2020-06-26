@@ -19,3 +19,4 @@ You can solve it with:
 $ pkg bootstrap -f
 $ pkg update -f
 ```
+Write Y for everything.
