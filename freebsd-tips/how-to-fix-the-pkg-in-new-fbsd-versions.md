@@ -16,6 +16,6 @@ Error updating repositories!
 
 You can solve it with:
 ```
-pkg bootstrap -f
-pkg update -f
+$ pkg bootstrap -f
+$ pkg update -f
 ```
