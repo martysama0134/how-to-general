@@ -31,7 +31,9 @@ pkg search gdb
 # install it
 pkg install gdb-8
 # now search how it's called the binary name
-gdbPRESSTAB
+gdb[PRESSTAB]
+>gdb        gdbm_dump  gdbmtool   gdbtui
+>gdb801     gdbm_load  gdbserver  gdbtui801
 # now to run it, you must call it gdb8 instead of gdb
 gdb801
 ```
