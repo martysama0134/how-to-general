@@ -33,6 +33,8 @@ pkg install gdb-8
 # now to run it, you must call it gdb8 instead of gdb
 ```
 
+Important: After that, you need to run the correct binary version like [this](res/gdb-choose.mp4).
+
 The instruction `bt full` returns the full backtrace, instead of doing just `bt`.
 
 On updated fbsd versions, the gnutarget may be `i386-portbld-freebsd10.1` instead of `i386-marcel-freebsd`.
