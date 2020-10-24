@@ -22,7 +22,7 @@ core game.core
 bt
 ```
 
-In case it says "dwarf error", you have to install the latest gdb and [run it as gdbXXX instead of gdb](res/gdb-choose.mp4?raw=true), for example:
+In case it says "dwarf error", you have to install the latest gdb and [run it as gdbXXX instead of gdb](https://gyazo.com/8927fe0cd80f048662ec9914916dac6f), for example:
 
 ```sh
 # search the pkg
