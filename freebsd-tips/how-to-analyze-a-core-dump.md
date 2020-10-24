@@ -30,7 +30,7 @@ pkg search gdb
 >gdb-8.1_1                      GNU GDB of newer version than comes with the system
 # install it
 pkg install gdb-8
-# now search how it's called the binary name
+# now search how the binary name is called
 gdb[PRESSTAB]
 >gdb        gdbm_dump  gdbmtool   gdbtui
 >gdb801     gdbm_load  gdbserver  gdbtui801
