@@ -22,7 +22,7 @@ core game.core
 bt
 ```
 
-In case it says "dwarf error", you have to install the latest gdb and run it as gdbXXX instead of gdb, for example:
+In case it says "dwarf error", you have to install the latest gdb and [run it as gdbXXX instead of gdb](res/gdb-choose.mp4?raw=true), for example:
 
 ```sh
 # search the pkg
@@ -30,10 +30,11 @@ pkg search gdb
 >gdb-8.1_1                      GNU GDB of newer version than comes with the system
 # install it
 pkg install gdb-8
+# now search how it's called the binary name
+gdbPRESSTAB
 # now to run it, you must call it gdb8 instead of gdb
+gdb801
 ```
-
-Important: After that, you need to run the correct binary version like [this](res/gdb-choose.mp4).
 
 The instruction `bt full` returns the full backtrace, instead of doing just `bt`.
 
