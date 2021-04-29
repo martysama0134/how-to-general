@@ -41,7 +41,7 @@ jailsrc {
 
 #### enable jail at boot starting
 ```sh
-$ sysrc jail_enable="YES"
+$ sysrc jail_enable=yes
 ```
 
 ## Jail Commands
