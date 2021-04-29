@@ -4,6 +4,7 @@
 * [Default root password](#default-root-password)
 * [Enable query logs](#enable-query-logs)
 * [Move the mysql data folder](#move-the-mysql-data-folder)
+* [Old password solution for MySQL 8](#old-password-solution-for-mysql-8)
 
 --------------------------------------------------------------------------------
 # Install MySQL
