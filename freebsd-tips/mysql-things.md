@@ -24,7 +24,7 @@ $ chown -R mysql /var/db/mysql/
 $ chgrp -R mysql /var/db/mysql/
 
 # enable mysql at boot starting
-$ sysrc mysql_enable="YES"
+$ sysrc mysql_enable=yes
 
 # start the mysql server service
 $ service mysql-server start
@@ -135,5 +135,13 @@ $ service mysql-server restart
 # give the privileges to the mysql group & user privileges for the new mysql folder
 $ chown -R mysql /home/mysql/
 $ chgrp -R mysql /home/mysql/
+```
+
+--------------------------------------------------------------------------------
+# Old password solution for MySQL 8
+Since MySQL8, the `PASSWORD()` function has been removed, and should replaced with new alternatives.
+The equivalent of the old one is:
+```sql
+SELECT CONCAT('*', UPPER(SHA1(UNHEX(SHA1('password')))));
 ```
 
