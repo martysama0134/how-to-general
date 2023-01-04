@@ -7,7 +7,7 @@ This solution is a very quick one. No ezjail, no iocage, only pure FBSD 10+ one.
 ```sh
 $ mkdir -p /home/jails/jailsrc
 $ cd /home/jails/jailsrc
-$ fetch http://ftp.freebsd.org/pub/FreeBSD/releases/i386/i386/11.4-RELEASE/base.txz
+$ fetch http://ftp.freebsd.org/pub/FreeBSD/releases/i386/i386/13.1-RELEASE/base.txz
 $ tar xpf base.txz;rm -rf boot;rm base.txz
 ```
 
