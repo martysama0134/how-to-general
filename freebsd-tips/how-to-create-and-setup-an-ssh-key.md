@@ -144,4 +144,4 @@ touch /root/.ssh/.authorized_keys
 chmod 400 /root/.ssh/.authorized_keys
 ```
 
-The `RSAAuthentication` option is no more required and can be removed.
+The `RSAAuthentication` option is no more required and can be removed too.
