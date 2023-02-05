@@ -138,7 +138,7 @@ Since Freebsd 13 the /root/.ssh/.authorized_keys folder and file are missing.
 You just need to recreate them and use the correct privileges, otherwise the server will refuse the key (e.g. if you use 777).
 
 ```
-mkdir -f /root/.ssh
+mkdir -p /root/.ssh
 chmod 700 /root/.ssh
 touch /root/.ssh/.authorized_keys
 chmod 400 /root/.ssh/.authorized_keys
