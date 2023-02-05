@@ -135,8 +135,6 @@ To login with root forbidding any password and allowing only the rsa ssh key:
 # Since FreeBSD 13
 Since Freebsd 13 the /root/.ssh/.authorized_keys folder and file are missing.
 
-The `RSAAuthentication` option is no more required and can be removed.
-
 You just need to recreate them and use the correct privileges, otherwise the server will refuse the key (e.g. if you use 777).
 
 ```
@@ -145,3 +143,5 @@ chmod 700 /root/.ssh
 touch /root/.ssh/.authorized_keys
 chmod 400 /root/.ssh/.authorized_keys
 ```
+
+The `RSAAuthentication` option is no more required and can be removed.
