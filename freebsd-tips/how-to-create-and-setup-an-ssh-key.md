@@ -3,6 +3,7 @@
 # Table of Contents
 * [How to create and setup an SSH key](#how-to-create-and-setup-an-ssh-key)
 * [How to convert a private SSH key into PPK](#how-to-convert-a-private-ssh-key-into-ppk)
+* [Since Freebsd 13](#since-freebsd-13)
 
 --------------------------------------------------------------------------------
 # How to create and setup an SSH key
@@ -129,3 +130,18 @@ To login with root forbidding any password and allowing only the rsa ssh key:
 	```
 
 	_Note: by doing `reload` instead of `restart`, the already connected ssh connections will stay connected and working_
+
+
+# Since FreeBSD 13
+Since Freebsd 13 the /root/.ssh/.authorized_keys folder and file are missing.
+
+The `RSAAuthentication` option is no more required and can be removed.
+
+You just need to recreate them and use the correct privileges, otherwise the server will refuse the key (e.g. if you use 777).
+
+```
+mkdir -f /root/.ssh
+chmod 700 /root/.ssh
+touch /root/.ssh/.authorized_keys
+chmod 400 /root/.ssh/.authorized_keys
+```
