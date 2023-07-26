@@ -158,3 +158,7 @@ Inside `my.cnf` add or change the following line related to `bind-address`:
 [mysqld]
 bind-address = 0.0.0.0
 ```
+
+Alternatively, the my.cnf is loading the content from `/usr/local/etc/mysql/conf.d/server.cnf`, so you must edit `bind-address` from there.
+
+After that, you restart the service with `service mysql-server restart`.
