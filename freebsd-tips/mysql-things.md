@@ -5,6 +5,7 @@
 * [Enable query logs](#enable-query-logs)
 * [Move the mysql data folder](#move-the-mysql-data-folder)
 * [Old password solution for MySQL 8](#old-password-solution-for-mysql-8)
+* [Allow connections outside localhost](#allow-connections-outside-localhost)
 
 --------------------------------------------------------------------------------
 # Install MySQL
@@ -146,3 +147,14 @@ The equivalent of the old one is:
 SELECT CONCAT('*', UPPER(SHA1(UNHEX(SHA1('password')))));
 ```
 
+# Allow connections outside localhost
+If you're connecting remotely and you get the error `error 2013 - lost connection to server at 'handshake: reading initial communication packet', system error: 10061` then you must allow outside connections.
+
+Locate your `my.cnf` file (usually inside `/usr/local/etc/mysql`) otherwise just use `find / -name my.cnf` to find it.
+
+Inside `my.cnf` add or change the following line related to `bind-address`:
+
+```ini
+[mysqld]
+bind-address = 0.0.0.0
+```
