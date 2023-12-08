@@ -147,6 +147,15 @@ The equivalent of the old one is:
 SELECT CONCAT('*', UPPER(SHA1(UNHEX(SHA1('password')))));
 ```
 
+So in order to recreate that function you do:
+```sql
+CREATE DEFINER=`root`@`localhost` FUNCTION `PASSWORD`(`password` CHAR(128)) RETURNS char(41) CHARSET latin1
+    DETERMINISTIC
+BEGIN
+    RETURN CONCAT('*', UPPER(SHA1(UNHEX(SHA1(password)))));
+END
+```
+
 # Allow connections outside localhost
 If you're connecting remotely and you get the error `error 2013 - lost connection to server at 'handshake: reading initial communication packet', system error: 10061` then you must allow outside connections.
 
