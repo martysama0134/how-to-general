@@ -7,7 +7,7 @@ This solution is a very quick one. No ezjail, no iocage, only pure FBSD 10+ one.
 ```sh
 $ mkdir -p /home/jails/jailsrc
 $ cd /home/jails/jailsrc
-$ fetch http://ftp.freebsd.org/pub/FreeBSD/releases/i386/i386/13.1-RELEASE/base.txz
+$ fetch https://download.freebsd.org/snapshots/i386/i386/13.4-STABLE/base.txz
 $ tar xpf base.txz;rm -rf boot;rm base.txz
 ```
 
@@ -54,6 +54,16 @@ $ service jail start
 $ jls
 # access into the specific jail <id> shell
 $ jexec 1 tcsh
+```
+
+#### REQUIREMENTS
+```sh
+# Join Session (use jls command to find the id)
+$ jexec 1 tcsh
+# Install requirements
+$ pkg install mariadb1011-server
+$ pkg install gmake
+# After that you can compile the Srcs/Server with gmake -j4
 ```
 
 ## Jail Commands Extra
