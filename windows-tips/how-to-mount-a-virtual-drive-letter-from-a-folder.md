@@ -1,3 +1,9 @@
+---
+title: Mount Virtual Drive Letter
+parent: Windows Tips
+nav_order: 2
+---
+
 # How to mount a virtual drive letter from a folder
 For example of a drive letter, I'll use `D:`!
 For example of a folder, I'll use `C:\D\`!

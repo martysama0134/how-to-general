@@ -1,3 +1,9 @@
+---
+title: WinSCP Tips
+parent: Windows Tips
+nav_order: 4
+---
+
 WinSCP has some settings you can change to improve its usage:
 
 1. All the transferred files will be sent compressed

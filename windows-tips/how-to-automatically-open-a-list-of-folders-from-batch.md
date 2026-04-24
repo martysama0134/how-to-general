@@ -1,3 +1,9 @@
+---
+title: Open Folders from Batch
+parent: Windows Tips
+nav_order: 1
+---
+
 # How to automatically open a list of folders
 
 Create a `.bat` file called like `defdirs.bat` containing:

@@ -1,3 +1,8 @@
+---
+title: Git Tips
+parent: Git Tips
+nav_order: 1
+---
 
 --------------------------------------------------------------------------------
 # Table of Contents
