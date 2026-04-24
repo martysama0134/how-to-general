@@ -1,3 +1,9 @@
+---
+title: Create a VBox to Deploy
+parent: FreeBSD Tips
+nav_order: 3
+---
+
 It's mostly for me.
 
 1. Download from [Freebsd](https://www.freebsd.org/releases/) the relative `FreeBSD-<version>-RELEASE-i386-disc1.iso` file.

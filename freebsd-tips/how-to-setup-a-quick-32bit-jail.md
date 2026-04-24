@@ -1,3 +1,9 @@
+---
+title: Setup a Quick 32bit Jail
+parent: FreeBSD Tips
+nav_order: 9
+---
+
 # How to setup a quick 32bit jail
 
 This solution is a very quick one. No ezjail, no iocage, only pure FBSD 10+ one.

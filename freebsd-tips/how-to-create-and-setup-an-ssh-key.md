@@ -1,3 +1,8 @@
+---
+title: Create and Setup an SSH Key
+parent: FreeBSD Tips
+nav_order: 4
+---
 
 ---
 # Table of Contents

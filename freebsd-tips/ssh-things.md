@@ -1,3 +1,8 @@
+---
+title: SSH Things
+parent: FreeBSD Tips
+nav_order: 11
+---
 
 ---
 # Table of Contents

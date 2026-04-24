@@ -1,4 +1,10 @@
 ---
+title: MySQL Things
+parent: FreeBSD Tips
+nav_order: 10
+---
+
+---
 # Table of Contents
 * [Install MySQL](#install-mysql)
 * [Default root password](#default-root-password)

@@ -1,3 +1,9 @@
+---
+title: Fix pkg in New FreeBSD Versions
+parent: FreeBSD Tips
+nav_order: 7
+---
+
 # How to fix the pkg in new Freebsd versions
 
 In case you got this issue:

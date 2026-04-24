@@ -1,3 +1,9 @@
+---
+title: Disable Sendmail
+parent: FreeBSD Tips
+nav_order: 5
+---
+
 # How to disable Sendmail
 
 1. Open `/etc/rc.conf`:

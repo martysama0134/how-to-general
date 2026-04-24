@@ -1,3 +1,9 @@
+---
+title: Load IPFW Rules
+parent: FreeBSD Tips
+nav_order: 8
+---
+
 # How to load the IPFW rules
 
 1. Copy your `ipfw.rules` inside /etc/

@@ -1,3 +1,9 @@
+---
+title: Clear Console Like CLS
+parent: FreeBSD Tips
+nav_order: 2
+---
+
 # How to clear the console like cls on Windows
 
 1. Open `/usr/local/bin/cls`:

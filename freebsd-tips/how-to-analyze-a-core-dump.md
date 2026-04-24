@@ -1,3 +1,9 @@
+---
+title: Analyze a Core Dump
+parent: FreeBSD Tips
+nav_order: 1
+---
+
 # How to analyze a core dump
 
 We usually use the GDB (gnu debugger) to achieve this.

@@ -1,3 +1,9 @@
+---
+title: Fix pkg in FreeBSD 9
+parent: FreeBSD Tips
+nav_order: 6
+---
+
 # How to fix the new pkg in Freebsd 9
 In fbsd 9, there are two kind of package management tools, pkg and pkg-tools.
 
