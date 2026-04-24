@@ -1,0 +1,14 @@
+title: How-To General
+description: Collection of general tutorials and tips
+remote_theme: just-the-docs/just-the-docs
+url: https://martysama0134.github.io
+baseurl: /how-to-general
+
+color_scheme: dark
+search_enabled: true
+
+exclude:
+  - docs/
+  - Gemfile.lock
+  - LICENSE
+  - .gitignore
